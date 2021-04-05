@@ -13,7 +13,7 @@
 // 2. Min
 // 3. sum of array
 // 4. reverse
-// 5.
+// 5. count duplicate array element and print
 
 // 1. Even Odd
 function findEvenOdd(number) {
@@ -189,3 +189,21 @@ let arr = [3, 5, 6, 8, 9, 87];
 let r_array = reverseArray(arr);
 console.log("Array : ", arr);
 console.log("Reverse Array : ", r_array);
+
+// 5. count duplicate array element and print
+let arr = [3, 5, 6, 7, 4, 3, 2, 6, 7];
+console.log(arr);
+let count = 0;
+let duplicate_value = [];
+
+for (let i = 0; i < arr.length; i++) {
+  for (let j = 1; j < i; j++) {
+    if (arr[i] === arr[j]) {
+      duplicate_value.push(arr[j]);
+      count++;
+    }
+  }
+}
+
+console.log("d", duplicate_value);
+console.log("count : ", count);
