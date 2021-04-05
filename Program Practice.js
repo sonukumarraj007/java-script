@@ -1,12 +1,21 @@
 /* Program Practice */
+
 // 1. Even Odd
 // 2. Factorial
-// 3. Prime Number
-// 4. Armstrong Number
-// 5. Max
-// 6. Min
+// 3. Fibonacci Series
+// 4. Prime Number
+// 5. Sum of digit
+// 6. Count no. of digit
+// 7. Armstrong Number
 
-// Even Odd
+// array
+// 1. Max
+// 2. Min
+// 3. sum of array
+// 4. reverse
+// 5.
+
+// 1. Even Odd
 function findEvenOdd(number) {
   if (number === 0) {
     return "Ii's " + number;
@@ -24,7 +33,7 @@ console.log(result2);
 let result3 = findEvenOdd(0);
 console.log(result3);
 
-// factorial
+// 2. factorial
 // 1*2*3 = 6
 // 1*2*3*4 = 24
 function calculateFactorial(number) {
@@ -39,7 +48,20 @@ function calculateFactorial(number) {
 let factorial_of = calculateFactorial(5);
 console.log("factorial of : ", factorial_of);
 
-// Prime Number
+// 3. Fibonacci Series
+let number = 8;
+let n1 = 0;
+let n2 = 1;
+let nextTerm;
+console.log("Fibonacci Series:");
+for (let i = 1; i <= number; i++) {
+  console.log(n1);
+  nextTerm = n1 + n2;
+  n1 = n2;
+  n2 = nextTerm;
+}
+
+// 4. Prime Number
 function findPrimeNumber(number) {
   let count = 0;
   for (let i = 1; i / 2 <= number; i++) {
@@ -56,19 +78,59 @@ function findPrimeNumber(number) {
 let prime_no = findPrimeNumber(8);
 console.log(prime_no);
 
-// Armstrong Number (sum of cubes of its digits)
+// 5. sum of digit
+function calculateSumOfNumber(number) {
+  let sum = 0;
+  while (number > 0) {
+    sum = sum + (number % 10);
+    number = Math.floor(number / 10);
+  }
+  return `sum of number : ${sum}`;
+}
 
+let number1 = calculateSumOfNumber(23);
+console.log(number1);
+
+// 6. count no. of digit
+
+function countDigit(number) {
+  let count = 0;
+  let tmp;
+  while (number > 0) {
+    tmp = number % 10;
+    number = Math.floor(number / 10);
+    count++;
+  }
+  return "digit of " + count;
+}
+
+let count_no = countDigit(12);
+console.log(count_no);
+
+// 7. Armstrong Number (sum of cubes of its digits)
 function findArmstrongNumber(number) {
   let sum = 0;
-  for (let i = 1; i <= number; i++) {}
-  return number + " Is armstrong number";
+  let tmp = 0;
+  let num = number;
+  while (num > 0) {
+    tmp = num % 10;
+    sum = sum + tmp * tmp * tmp;
+    num = Math.floor(num / 10);
+  }
+  if (sum === number) {
+    return `${number} Is armstrong number`;
+  } else {
+    return `${number} Is not armstrong number`;
+  }
 }
-let armstrong_no = findArmstrongNumber(4);
+let armstrong_no = findArmstrongNumber(153);
 console.log(armstrong_no);
+
+// array
 
 let number = [4, 5, 1, 2, 9, 10, 5];
 
-// Max
+// 1. Max
 function findMax(arr) {
   let len = arr.length;
   let max = -Infinity;
@@ -83,7 +145,7 @@ function findMax(arr) {
 let max = findMax(number);
 console.log("Max of : ", max);
 
-// Min
+// 2. Min
 function findMin(arr) {
   var len = arr.length;
   var min = Infinity;
@@ -97,3 +159,33 @@ function findMin(arr) {
 
 let min = findMin(number);
 console.log("Min of : ", min);
+
+// 3. sum of array
+
+function sumOfArray(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum = sum + arr[i];
+  }
+  return sum;
+}
+
+let arr1 = [1, 9, 4, 5];
+
+let sum_of_arr = sumOfArray(arr1);
+console.log(sum_of_arr);
+
+// 4. array reverse
+
+function reverseArray(arr) {
+  let r_arr = [];
+  for (let i = arr.length - 1; i >= 0; i--) {
+    r_arr.push(arr[i]);
+  }
+  return r_arr;
+}
+
+let arr = [3, 5, 6, 8, 9, 87];
+let r_array = reverseArray(arr);
+console.log("Array : ", arr);
+console.log("Reverse Array : ", r_array);
