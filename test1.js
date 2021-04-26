@@ -83,3 +83,40 @@ let data = {
   })
 
   console.log(imgeUrl)
+
+
+
+
+  --------------------------
+
+  var trx = [{
+transaction: 1,
+customer: 100,
+amount: 100
+},
+{
+transaction: 2,
+customer: 105,
+amount: 100
+},
+{
+transaction: 3,
+customer: 100,
+amount: 50
+},
+{
+transaction: 4,
+customer: 45,
+amount: 750
+},
+{
+transaction: 5,
+customer: 45,
+amount: 750
+}];
+
+
+// [{cust : x , trans : [x,y]}]
+
+
+console.log("2" - 2);
