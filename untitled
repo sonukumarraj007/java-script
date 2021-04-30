@@ -1,0 +1,41 @@
+
+
+html.file
+
+<ppp (click)="updated($event)"></pp>
+
+ts.file
+
+-----
+
+update(id){
+	
+	this.api.updateChart(id).subscribe((data =>)
+     console.log(" data updated")
+	)
+}
+
+home, about, content
+
+
+<a routerLink="/home" routerLinkActive="active" click="userClick($event)"></a>
+
+
+login
+
+:
+redicet(/)
+
+
+npm install --save @fortawesome/fontawesome-free
+
+
+node_modules/@fortawesome/fontawesome-free/css/all.min.css
+
+ "node_modules/jquery/dist/jquery.min.js",
+
+
+ https://in.linkedin.com/in/sonukumar007
+
+
+
