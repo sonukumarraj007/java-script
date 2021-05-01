@@ -1,7 +1,5 @@
 
 
-html.file
-
 <ppp (click)="updated($event)"></pp>
 
 ts.file
