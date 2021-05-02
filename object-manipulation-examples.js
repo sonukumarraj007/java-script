@@ -132,7 +132,8 @@ data.postdata.forEach(item => {
 console.log(allImgeUrl);
 console.log("---------------------------------------")
 
-// [{cust : x , trans : [x,y]}]
+//3. Count transaction with customer id and convert into given format 
+//   [{cust : x , trans : [x,y]}]
 
 var trx = [{
 		transaction: 1,
@@ -160,3 +161,95 @@ var trx = [{
 		amount: 750
 	}
 ];
+
+// 4. ['Sonu', 'Vikash','Anshu','Udit', 'Sandeep']
+// convert into object of array
+// {
+// 	'name': value
+// }
+
+let name_list = ['Sonu', 'Vikash','Anshu','Udit', 'Sandeep']
+let obj1 = [];
+
+name_list.forEach(item=>{
+	obj1.push({name: item})
+})
+console.log(obj1)
+console.log("---------------------------------------");
+
+// 5. ['Sonu', 'Vikash','Anshu','Udit', 'Sandeep', 'Sonu', 'Anshu']
+// remove duplicate and
+// convert into object of array
+// {
+// 	'name': value
+// }
+
+let name_list_2 = ['Sonu', 'Vikash','Anshu','Udit', 'Sandeep', 'Sonu', 'Anshu'];
+let obj2 = [];
+let tmp1= new Set();
+
+name_list_2.forEach(item=>{
+	tmp1.add(item);
+})
+
+tmp1.forEach(item=>{
+	obj2.push({name: item})
+})
+
+console.log(obj2)
+console.log("--------------sssss-------------------------");
+
+// 5. ['Sonu', 'Vikash','Anshu','Udit', 'Sandeep',]
+// convert into object of array
+// {
+// 	'label': 'Sonu', 'value': 'Sonu'
+// }
+
+let name_list_3 = ['Sonu', 'Vikash','Anshu','Udit', 'Sandeep']
+let obj3 = [];
+
+name_list.forEach(item=>{
+	obj3.push({label: item, value: item})
+})
+console.log(obj3)
+console.log("---------------------------------------");
+
+
+// 6. Get all name value and convert into object of array
+// {
+// 	'label': 'Sonu', 'value': 'Sonu'
+// }
+
+let name_list_4 = [
+	{
+		'id': 1,
+		'name': 'Sonu'
+	},
+	{
+		'id': 2,
+		'name': 'Anshu'
+	},
+	{
+		'id': 3,
+		'name': 'Vikash'
+	},
+	{
+		'id': 4,
+		'name': 'Ravi'
+	},
+	
+]
+
+let obj4 = [];
+
+name_list_4.forEach(item=>{
+	obj4.push({label: item.name, value: item.name})
+})
+
+console.log(obj4)
+console.log("---------------------------------------");
+
+// console.log('1');
+// console.log('2');
+// console.log('3');
+// console.log('5'-5);
