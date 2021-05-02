@@ -262,3 +262,47 @@ console.log("---------------------------------------");
 // console.log('2');
 // console.log('3');
 // console.log('5'-5);
+
+// 7. Merge to object
+// Use a spread operator ( ...)
+// Use the Object.assign() method
+let obj5 = {
+	name: 'Sonu',
+	age: 26,
+  };
+  
+  let obj6 = {
+	hobby: 'Criket',
+	mobil: 5687654,
+	name: 'Sonu kumar',
+  };
+  
+  console.log({ ...obj5, ...obj6 });
+  console.log("---------------------------------------");
+  
+  console.log(Object.assign(obj5, obj6))
+  console.log("---------------------------------------");
+  
+//   8. Add some property to objrct
+
+let obj7 ={
+	'name': 'Vikash Kumar',
+	'age': 25
+}
+
+obj7.roll_no = "12345"
+console.log(obj7)
+console.log("---------------------------------------");
+
+
+//   9. Delete some property to objrct
+
+let obj8 ={
+	'name': 'Kumar',
+	'age': 25,
+	'roll_no': 12345
+}
+
+delete obj8.name;
+console.log(obj8)
+console.log("---------------------------------------");
