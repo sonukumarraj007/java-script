@@ -162,6 +162,15 @@ var trx = [{
 	}
 ];
 
+for(let i=0; i<trx.length; i++){
+  for(let j=1; j<i; j++){
+	if(trx[i].customer == trx[j].customer){
+    	console.log(j," j : ", trx[j])
+	}
+  }
+}
+console.log("---------------------------------------");
+
 // 4. ['Sonu', 'Vikash','Anshu','Udit', 'Sandeep']
 // convert into object of array
 // {
@@ -197,7 +206,7 @@ tmp1.forEach(item=>{
 })
 
 console.log(obj2)
-console.log("--------------sssss-------------------------");
+console.log("---------------------------------------");
 
 // 5. ['Sonu', 'Vikash','Anshu','Udit', 'Sandeep',]
 // convert into object of array
