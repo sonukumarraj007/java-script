@@ -20,11 +20,11 @@
 <details open="open">
   <summary>Array</summary>
   <ol>
-    <li><a href="#">Max</a></li>
-    <li><a href="#">Min</a></li>
-    <li><a href="#">Sum of array</a></li>
-    <li><a href="#">Reverse</a></li>
-    <li><a href="#">Count duplicate array element and print</a></li>
+    <li><a href="https://github.com/sonukumarraj007/java-script/blob/master/program-practice/array/max.js">Max</a></li>
+    <li><a href="https://github.com/sonukumarraj007/java-script/blob/master/program-practice/array/min.js">Min</a></li>
+    <li><a href="https://github.com/sonukumarraj007/java-script/blob/master/program-practice/array/sum-of-array.js">Sum of array</a></li>
+    <li><a href="https://github.com/sonukumarraj007/java-script/blob/master/program-practice/array/array-reverse.js">Reverse</a></li>
+    <li><a href="https://github.com/sonukumarraj007/java-script/blob/master/program-practice/array/count-duplicate-array-element.js">Count duplicate array element and print</a></li>
   </ol>
 </details>
 
