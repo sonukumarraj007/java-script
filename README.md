@@ -5,7 +5,7 @@
 <details open="open">
   <summary>Basic</summary>
   <ol>
-    <li><a href="https://github.com/sonukumarraj007/java-script/blob/master/program-practice/basic/even-odd-no.js" target="__blank">Even Odd</a></li>
+    <li><a href="https://github.com/sonukumarraj007/java-script/blob/master/program-practice/basic/even-odd-no.js" target="_blank">Even Odd</a></li>
     <li><a href="https://github.com/sonukumarraj007/java-script/blob/master/program-practice/basic/factorial.js" target="__blank">Factorial</a></li>
     <li><a href="https://github.com/sonukumarraj007/java-script/blob/master/program-practice/basic/fibonacci-series.js" target="__blank">Fibonacci Series</a></li>
     <li><a href="https://github.com/sonukumarraj007/java-script/blob/master/program-practice/basic/prime-number.js" target="__blank">Prime Number</a></li>
