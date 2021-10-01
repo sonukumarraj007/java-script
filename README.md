@@ -6,12 +6,12 @@
   <summary>Basic</summary>
   <ol>
     <li><a href="https://github.com/sonukumarraj007/java-script/blob/master/program-practice/basic/even-odd-no.js" target="_blank">Even Odd</a></li>
-    <li><a href="https://github.com/sonukumarraj007/java-script/blob/master/program-practice/basic/factorial.js" target="__blank">Factorial</a></li>
-    <li><a href="https://github.com/sonukumarraj007/java-script/blob/master/program-practice/basic/fibonacci-series.js" target="__blank">Fibonacci Series</a></li>
-    <li><a href="https://github.com/sonukumarraj007/java-script/blob/master/program-practice/basic/prime-number.js" target="__blank">Prime Number</a></li>
-    <li><a href="https://github.com/sonukumarraj007/java-script/blob/master/program-practice/basic/sum-of-digit.js" target="__blank">Sum of digit</a></li>
-    <li><a href="https://github.com/sonukumarraj007/java-script/blob/master/program-practice/basic/count-no-of-digit.js" target="__blank">Count no. of digit</a></li>
-    <li><a href="https://github.com/sonukumarraj007/java-script/blob/master/program-practice/basic/armstrong-number.js" target="__blank">Armstrong Number</a></li>
+    <li><a href="https://github.com/sonukumarraj007/java-script/blob/master/program-practice/basic/factorial.js" target="_blank">Factorial</a></li>
+    <li><a href="https://github.com/sonukumarraj007/java-script/blob/master/program-practice/basic/fibonacci-series.js" target="_blank">Fibonacci Series</a></li>
+    <li><a href="https://github.com/sonukumarraj007/java-script/blob/master/program-practice/basic/prime-number.js" target="_blank">Prime Number</a></li>
+    <li><a href="https://github.com/sonukumarraj007/java-script/blob/master/program-practice/basic/sum-of-digit.js" target="_blank">Sum of digit</a></li>
+    <li><a href="https://github.com/sonukumarraj007/java-script/blob/master/program-practice/basic/count-no-of-digit.js" target="_blank">Count no. of digit</a></li>
+    <li><a href="https://github.com/sonukumarraj007/java-script/blob/master/program-practice/basic/armstrong-number.js" target="_blank">Armstrong Number</a></li>
   </ol>
 </details>
 
