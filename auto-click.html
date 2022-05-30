@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Auto Click</title>
+</head>
+
+<body>
+
+    <button onclick="startAutoClick()">
+        Start Auto Click
+    </button>
+
+    <button onclick="stopAutoClick()">
+        Stop Auto Click
+    </button>
+
+    <p>Allow popup </p>
+
+    <ul id="message_window">
+    </ul>
+
+    <div id="stop_auto_click"></div>
+
+
+    <script>
+        var timer;
+
+        function writeSomeMessage() {
+            const node = document.createElement("li");
+            const textnode = document.createTextNode("Opened new tab ");
+            node.appendChild(textnode);
+            document.getElementById("message_window").appendChild(node);
+        }
+
+        function openWin() {
+            tmpWindow = window.open("", "", "width=200,height=100");
+        }
+
+        function closeWin() {
+            tmpWindow.close();
+        }
+
+        function startAutoClick() {
+            timer = setInterval(function () {
+                writeSomeMessage();
+                openWin();
+                close_win = setTimeout("closeWin()", 2000)
+            }, 5000);
+
+        }
+
+        function stopAutoClick() {
+            var theDiv = document.getElementById("stop_auto_click");
+            theDiv.innerHTML += "<h3>Auto Click Stopped</h3>";
+            clearInterval(timer);
+        }
+
+
+    </script>
+
+</body>
+
+</html>
