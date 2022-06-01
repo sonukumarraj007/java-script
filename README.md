@@ -28,7 +28,6 @@
   </ol>
 </details>
 
-
 <!-- string -->
 
 <details open="open">
@@ -41,7 +40,7 @@
 <!-- object manipulationn examples -->
 
 <details open="open">
-  <summary>Bbject Manipulationn Example</summary>
+  <summary>Object Manipulationn Example</summary>
   <ol>
     <li><a href="https://github.com/sonukumarraj007/java-script/blob/master/program-practice/object-manipulation-examples/1.calculate-total-sum-of-salary.js">Calculate total sum of salary</a></li>
     <li><a href="https://github.com/sonukumarraj007/java-script/blob/master/program-practice/object-manipulation-examples/2.store-all-img-url-in-one-array.js">Store all imgUrl in one array</a></li>
@@ -60,4 +59,3 @@
     <li><a href="https://github.com/sonukumarraj007/java-script/blob/master/program-practice/object-manipulation-examples/11.string-print.js">String print '5'-5 </a></li>
   </ol>
 </details>
-
