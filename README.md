@@ -1,3 +1,29 @@
+## Basic Program
+
+    	<ol>
+    		<li>sum, substraction, multiplication, divison and mod</li>
+    		<li>Even Odd</li>
+    		<li>Factorial</li>
+    		<li>Swap two number</li>
+    		<li>Swap two number without third variable</li>
+    		<li>Reverse Number</li>
+    		<li>Sum of Digit</li>
+    		<li>Leap Year</li>
+    		<li>Power of given Number</li>
+    		<li>Conunt the Digit in a Number</li>
+    		<li>Random Number Generator</li>
+    		<li>Factorial Using Recusion</li>
+    		<li>Fibonacci series</li>
+    		<li>Fibonacci series Recusion </li>
+    		<li>Prime number</li>
+    		<li>All Prime Numbers between 1 to n</li>
+    		<li>Palindrome number</li>
+    		<li>Armstrong number</li>
+    		<li>Strong Number</li>
+    		<li>Spy Number</li>
+    		<li>Fahrenheit To</li>
+    	</ol>
+
 ## Java Script Interview Question
 
 <ol>
@@ -37,6 +63,7 @@
 			<li>callbacks, Callback in callback</li>
 			<li>Promise, Promises chaining, Returning promises</li>
 		</ol>
+    <hr>
 
 ## Java Script Program Practice
 
