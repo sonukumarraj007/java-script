@@ -1,6 +1,6 @@
 ## Basic Program
 
-    	<ol>
+<ol>
     		<li>sum, substraction, multiplication, divison and mod</li>
     		<li>Even Odd</li>
     		<li>Factorial</li>
@@ -22,7 +22,7 @@
     		<li>Strong Number</li>
     		<li>Spy Number</li>
     		<li>Fahrenheit To</li>
-    	</ol>
+  </ol>
 
 ## Java Script Interview Question
 
