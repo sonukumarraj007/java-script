@@ -1,3 +1,8 @@
+## Java Script Interview Question
+
+- var, let, const
+- var, let, const
+
 ## Java Script Program Practice
 
 <!--  basic -->
