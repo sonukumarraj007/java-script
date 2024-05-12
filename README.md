@@ -581,7 +581,45 @@ Output: 321
 
 ```
 
-## 6. Sum of array:
+## 6. Conunt the Digit in Number:
+
+```ts
+
+function conuntDigitInNumber(number) {
+  
+  return number.toString().split('').length;
+ 
+}
+
+console.log(conuntDigitInNumber(54));
+
+Output : 2
+
+```
+
+## 7. Sum of Digit:
+
+```ts
+
+function sumOfDigits(number) {
+    let sum = 0;
+ 
+    const digits = number.toString().split('');
+   
+    digits.forEach((el)=> {
+        sum = sum + parseInt(el, 10);
+    })
+    
+    return sum;
+}
+
+console.log(sumOfDigits(54));
+
+Output : 9
+
+```
+
+## 8. Sum of array:
 
 ```ts
 const arr = [3,6,2,1,8,6];
