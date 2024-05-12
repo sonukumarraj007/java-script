@@ -771,7 +771,38 @@ Output: true
 
 ## 11. Strong Number:
 
+A strong number (also known as a factorial sum number or Krishnamurthy number) is a number whose sum of the factorial of its digits is equal to the number itself. For example, 145 is a strong number because
+
 ```ts
+
+1! + 4! + 5! = 1 + 24 + 120 = 145
+
+```
+
+```ts
+
+function factorial(number) {
+    if (number === 0 || number === 1) {
+        return 1;
+    } else {
+        return number * factorial(number - 1);
+    }
+}
+
+function isStrongNumber(number) {
+    const numString = number.toString();
+    let sum = 0;
+    
+    for (let digit of numString) {
+        sum += factorial(parseInt(digit));
+    }
+    
+    return sum === number;
+}
+
+console.log(isStrongNumber(145));
+
+Output: true
 
 ```
 
