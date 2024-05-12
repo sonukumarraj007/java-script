@@ -487,7 +487,28 @@ Output: true
 
 ```
 
-## 4. Swap two number:
+## 4. Celsius to fahrenheit:
+
+To convert Celsius to Fahrenhei:
+
+Fahrenheit = (Celsius × 5/9) + 32
+
+```ts
+
+function celsiusToFahrenheit(celsius) {
+    return (celsius * 9 / 5) + 32;
+}
+
+const celsiusTemperature = 38;
+const fahrenheitTemperature = celsiusToFahrenheit(celsiusTemperature);
+
+console.log(celsiusTemperature + "°C is equal to " + fahrenheitTemperature + "°F");
+
+Output: "38°C is equal to 100.4°F"
+
+```
+
+## 5. Swap two number:
 
 ```ts
 
@@ -542,7 +563,7 @@ Output: "a : 20"
 
 ```
 
-## 5. Generator Random Number between given min and max number:
+## 6. Generator Random Number between given min and max number:
 
 ```ts
 
@@ -557,7 +578,7 @@ console.log(randomNumber(1,5));
 
 ```
 
-## 6. Factorial: 
+## 7. Factorial: 
 
 ```ts
 
@@ -596,7 +617,7 @@ Output: 720
 
 ```
 
-## 7. Fibonacci series:
+## 8. Fibonacci series:
 
 ```ts
 
@@ -640,7 +661,7 @@ console.log(fibonacciSeries(5));
 
 ```
 
-## 8. Prime number:
+## 9. Prime number:
 
 ```ts
 
@@ -722,7 +743,7 @@ Output: [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47]
 ```
 
 
-## 9. Palindrome number:
+## 10. Palindrome number:
 
 ```ts
 
@@ -739,7 +760,7 @@ Outout: true
 
 ```
 
-## 10. Armstrong number:
+## 11. Armstrong number:
 
 An Armstrong number (also known as narcissistic number, plenary number, or plus perfect number) is a number that is equal to the sum of its own digits each raised to the power of the number of digits. For example, 153 is an Armstrong number because 
 
@@ -769,7 +790,7 @@ Output: true
 
 ```
 
-## 11. Strong Number:
+## 12. Strong Number:
 
 A strong number (also known as a factorial sum number or Krishnamurthy number) is a number whose sum of the factorial of its digits is equal to the number itself. For example, 145 is a strong number because
 
@@ -806,7 +827,7 @@ Output: true
 
 ```
 
-## 12. Spy Number:
+## 13. Spy Number:
 
 A Spy Number is a number where the sum of its digits equals the product of its digits. In other words, if we multiply all the digits of the number and add them, the result is the same as the number itself.
 
@@ -825,7 +846,7 @@ console.log(isSpyNumber(1124));
 
 ```
 
-## 13. Reverse Number: 
+## 14. Reverse Number: 
 
 ```ts
 
@@ -842,7 +863,7 @@ Output: 321
 
 ```
 
-## 14. Conunt the Digit in Number:
+## 15. Conunt the Digit in Number:
 
 ```ts
 
@@ -858,7 +879,7 @@ Output : 2
 
 ```
 
-## 15. Sum of Digit:
+## 16. Sum of Digit:
 
 ```ts
 
@@ -880,7 +901,7 @@ Output : 9
 
 ```
 
-## 16. Sum of array:
+## 17. Sum of array:
 
 ```ts
 const arr = [3,6,2,1,8,6];
