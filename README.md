@@ -402,7 +402,63 @@ hello = val => "Hello " + val;
 ```
 
 
-## 1. Sum of array:
+## 1. Callback example:
+
+```ts
+
+function add(num1, num2){
+  return num1+num2;
+}
+
+function subtract(num1, num2){
+  return num1-num2;
+}
+
+function multiply(num1, num2){
+  return num1*num2;
+}
+
+function division(num1, num2){
+  return num1/num2;
+}
+
+function mod(num1, num2){
+  return num1%num2;
+}
+
+function power(num1, num2){
+  return num1**num2;
+}
+
+function calculate(num1, num2, callback){
+  return callback(num1, num2);
+}
+
+console.log(calculate(2,4, power));
+
+Output: 16
+
+```
+
+## 2. Even or Odd number:
+
+```ts
+
+function evenOdd(num){
+  if(num===0){
+    return "It's Zero."
+  }else if(num!==0 && num % 2 === 0 ){
+    return `${num} is Even No.`;
+  }else{
+    return `${num} is Odd No.`;
+  }
+}
+
+console.log(evenOdd(4));
+
+```
+
+## 3. Sum of array:
 
 ```ts
 const arr = [3,6,2,1,8,6];
@@ -454,23 +510,6 @@ Output : 13
 
 ```
 
-## 2. Even or Odd number:
-
-```ts
-
-function evenOdd(num){
-  if(num===0){
-    return "It's Zero."
-  }else if(num!==0 && num % 2 === 0 ){
-    return `${num} is Even No.`;
-  }else{
-    return `${num} is Odd No.`;
-  }
-}
-
-console.log(evenOdd(4));
-
-```
 
 
 
