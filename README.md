@@ -450,44 +450,45 @@ Output: 16
 
 ```
 
-## 2. Even or Odd number:
+## 2. Area of a circle:
+
+Area = π × radius x radius
 
 ```ts
 
-function evenOdd(num){
-  if(num===0){
-    return "It's Zero."
-  }
-   else if(num!==0 && num % 2 === 0 ){
-    return `${num} is Even No.`;
-  }
-   else{
-    return `${num} is Odd No.`;
-  }
+function areaOfCircle(radius) {
+    return Math.PI * radius ** 2;
 }
 
-console.log(evenOdd(4));
+console.log(areaOfCircle(5));
+
+Output: 78.53981633974483
 
 ```
 
-## 3. Leap Year:
+## 3. Area of a square:
+
+Area = side x side
 
 ```ts
 
-function isLeapYear(year) {
-    // Leap years are evenly divisible by 4
-    // Unless they are also divisible by 100, but not 400
-  
-    return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
+function areaOfSquare(side) {
+    return side ** 2;
 }
 
-console.log(isLeapYear(2024));
+console.log(areaOfSquare(5));
 
-Output: true
+Output: 25
 
 ```
 
-## 4. Celsius to fahrenheit:
+## 4. 
+
+```ts
+
+```
+
+## 5. Celsius to fahrenheit:
 
 To convert Celsius to Fahrenhei:
 
@@ -508,7 +509,44 @@ Output: "38°C is equal to 100.4°F"
 
 ```
 
-## 5. Swap two number:
+## 6. Leap Year:
+
+```ts
+
+function isLeapYear(year) {
+    // Leap years are evenly divisible by 4
+    // Unless they are also divisible by 100, but not 400
+  
+    return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
+}
+
+console.log(isLeapYear(2024));
+
+Output: true
+
+```
+
+## 7. Even or Odd number:
+
+```ts
+
+function evenOdd(num){
+  if(num===0){
+    return "It's Zero."
+  }
+   else if(num!==0 && num % 2 === 0 ){
+    return `${num} is Even No.`;
+  }
+   else{
+    return `${num} is Odd No.`;
+  }
+}
+
+console.log(evenOdd(4));
+
+```
+
+## 8. Swap two number:
 
 ```ts
 
@@ -563,7 +601,7 @@ Output: "a : 20"
 
 ```
 
-## 6. Generator Random Number between given min and max number:
+## 9. Generator Random Number between given min and max number:
 
 ```ts
 
@@ -578,7 +616,7 @@ console.log(randomNumber(1,5));
 
 ```
 
-## 7. Factorial: 
+## 10. Factorial: 
 
 ```ts
 
@@ -617,7 +655,7 @@ Output: 720
 
 ```
 
-## 8. Fibonacci series:
+## 11. Fibonacci series:
 
 ```ts
 
@@ -661,7 +699,7 @@ console.log(fibonacciSeries(5));
 
 ```
 
-## 9. Prime number:
+## 12. Prime number:
 
 ```ts
 
@@ -743,7 +781,7 @@ Output: [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47]
 ```
 
 
-## 10. Palindrome number:
+## 13. Palindrome number:
 
 ```ts
 
@@ -760,7 +798,7 @@ Outout: true
 
 ```
 
-## 11. Armstrong number:
+## 14. Armstrong number:
 
 An Armstrong number (also known as narcissistic number, plenary number, or plus perfect number) is a number that is equal to the sum of its own digits each raised to the power of the number of digits. For example, 153 is an Armstrong number because 
 
@@ -790,7 +828,7 @@ Output: true
 
 ```
 
-## 12. Strong Number:
+## 15. Strong Number:
 
 A strong number (also known as a factorial sum number or Krishnamurthy number) is a number whose sum of the factorial of its digits is equal to the number itself. For example, 145 is a strong number because
 
@@ -827,7 +865,7 @@ Output: true
 
 ```
 
-## 13. Spy Number:
+## 16. Spy Number:
 
 A Spy Number is a number where the sum of its digits equals the product of its digits. In other words, if we multiply all the digits of the number and add them, the result is the same as the number itself.
 
@@ -846,7 +884,7 @@ console.log(isSpyNumber(1124));
 
 ```
 
-## 14. Reverse Number: 
+## 17. Reverse Number: 
 
 ```ts
 
@@ -863,7 +901,7 @@ Output: 321
 
 ```
 
-## 15. Conunt the Digit in Number:
+## 18. Conunt the Digit in Number:
 
 ```ts
 
@@ -879,7 +917,7 @@ Output : 2
 
 ```
 
-## 16. Sum of Digit:
+## 19. Sum of Digit:
 
 ```ts
 
@@ -901,7 +939,7 @@ Output : 9
 
 ```
 
-## 17. Sum of array:
+## 20. Sum of array:
 
 ```ts
 const arr = [3,6,2,1,8,6];
