@@ -447,9 +447,11 @@ Output: 16
 function evenOdd(num){
   if(num===0){
     return "It's Zero."
-  }else if(num!==0 && num % 2 === 0 ){
+  }
+   else if(num!==0 && num % 2 === 0 ){
     return `${num} is Even No.`;
-  }else{
+  }
+   else{
     return `${num} is Odd No.`;
   }
 }
@@ -458,7 +460,46 @@ console.log(evenOdd(4));
 
 ```
 
-## 3. Sum of array:
+## 3. Factorial: 
+
+```ts
+
+function factorialOf(num){
+  let result = 1;
+
+  while(num >= 1){
+   result = result * num;
+   num--;
+  }
+
+  return result;
+}
+
+console.log(factorialOf(6));
+
+Output: 720
+
+```
+
+Recursive way:
+
+```ts
+
+function factorialOf(n) {
+    if (n === 0 || n === 1) {
+        return 1;
+    }
+
+    return n * factorialOf(n - 1);
+}
+
+console.log(factorialOf(6));
+
+Output: 720
+
+```
+
+## 4. Sum of array:
 
 ```ts
 const arr = [3,6,2,1,8,6];
@@ -509,7 +550,6 @@ console.log(sumOfArray);
 Output : 13
 
 ```
-
 
 
 
