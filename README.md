@@ -564,6 +564,23 @@ Output: 720
 
 ```
 
+## 5. Reverse Number: 
+
+```ts
+
+function reverseNumber(number) {
+
+    const reversedString = number.toString().split('').reverse().join('');
+
+    return parseInt(reversedString, 10);
+}
+
+console.log(reverseNumber(123));
+
+Output: 321
+
+```
+
 ## 6. Sum of array:
 
 ```ts
