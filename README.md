@@ -596,7 +596,66 @@ Output: 720
 
 ```
 
-## 7. Reverse Number: 
+## 7. Fibonacci series:
+
+```ts
+
+function fibonacciSeries(length) {
+    const series = [0, 1]; 
+    // Initialize the series with the first two Fibonacci numbers
+    // Generate subsequent Fibonacci numbers and add them to the series
+    for (let i = 2; i < length; i++) {
+        series.push(series[i - 1] + series[i - 2]);
+    }
+    return series;
+}
+
+console.log(fibonacciSeries(5));
+
+Output: [0, 1, 1, 2, 3]
+
+```
+
+With recursion : 
+
+```ts
+
+function fibonacci(n) {
+    if (n <= 1) {
+        return n;
+    } else {
+        return fibonacci(n - 1) + fibonacci(n - 2);
+    }
+}
+
+function fibonacciSeries(length) {
+    const series = [];
+    for (let i = 0; i < length; i++) {
+        series.push(fibonacci(i));
+    }
+    return series;
+}
+
+console.log(fibonacciSeries(5));
+
+```
+
+## 8. 
+
+```ts
+
+```
+
+
+## 9. 
+
+```ts
+
+```
+
+
+
+## 10. Reverse Number: 
 
 ```ts
 
@@ -613,7 +672,7 @@ Output: 321
 
 ```
 
-## 8. Conunt the Digit in Number:
+## 11. Conunt the Digit in Number:
 
 ```ts
 
@@ -629,7 +688,7 @@ Output : 2
 
 ```
 
-## 9. Sum of Digit:
+## 12. Sum of Digit:
 
 ```ts
 
@@ -651,7 +710,7 @@ Output : 9
 
 ```
 
-## 10. Sum of array:
+## 13. Sum of array:
 
 ```ts
 const arr = [3,6,2,1,8,6];
