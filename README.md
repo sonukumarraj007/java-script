@@ -402,6 +402,53 @@ hello = val => "Hello " + val;
 ```
 
 
+## Sum of array : [3,6,2,1,8,6]
+
+```ts
+
+function sumOfArray(arr){
+  return arr.reduce((acc,curr) => acc + curr, 0)
+}
+
+console.log(sumOfArray(arr));
+
+Output : 13
+
+```
+
+```ts
+
+const  sumOfArray = (arr) => arr.reduce((acc,curr) => acc + curr, 0);
+
+console.log(sumOfArray(arr));
+
+Output : 13
+
+```
+
+```ts
+
+const  sumOfArray = arr => arr.reduce((acc,curr) => acc + curr, 0);
+
+console.log(sumOfArray(arr));
+
+Output : 13
+
+```
+
+
+```ts
+
+let sumOfArray = 0;
+ 
+arr.forEach((el)=> sumOfArray = sumOfArray + el);
+
+console.log(sumOfArray);
+
+Output : 13
+
+```
+
 
 
 
