@@ -739,7 +739,51 @@ Outout: true
 
 ```
 
-## 10. Reverse Number: 
+## 10. Armstrong number:
+
+An Armstrong number (also known as narcissistic number, plenary number, or plus perfect number) is a number that is equal to the sum of its own digits each raised to the power of the number of digits. For example, 153 is an Armstrong number because 
+
+```ts
+
+1**3 + 5**3 + 3**3 = 1 + 125 + 27 = 153
+
+```
+
+```ts
+
+function isArmstrongNumber(num) {
+    const numString = num.toString();
+    const numDigits = numString.length;
+    let sum = 0;
+    
+    for (let digit of numString) {
+        sum += Math.pow(parseInt(digit), numDigits);
+    }
+    
+    return sum === num;
+}
+
+console.log( isArmstrongNumber(153));
+
+Output: true
+
+```
+
+## 11. Strong Number:
+
+```ts
+
+```
+
+## 12. Spy Number:
+
+```ts
+
+```
+
+
+
+## 13. Reverse Number: 
 
 ```ts
 
@@ -756,7 +800,7 @@ Output: 321
 
 ```
 
-## 11. Conunt the Digit in Number:
+## 14. Conunt the Digit in Number:
 
 ```ts
 
@@ -772,7 +816,7 @@ Output : 2
 
 ```
 
-## 12. Sum of Digit:
+## 15. Sum of Digit:
 
 ```ts
 
@@ -794,7 +838,7 @@ Output : 9
 
 ```
 
-## 13. Sum of array:
+## 16. Sum of array:
 
 ```ts
 const arr = [3,6,2,1,8,6];
