@@ -722,13 +722,22 @@ Output: [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47]
 ```
 
 
-## 9. 
+## 9. Palindrome number:
 
 ```ts
 
+function isPalindrome(num) {
+    const originalString = num.toString();
+    const reversedString = originalString.split('').reverse().join('');
+  
+    return originalString === reversedString;
+}
+
+console.log(isPalindrome(12321));
+
+Outout: true
+
 ```
-
-
 
 ## 10. Reverse Number: 
 
@@ -823,7 +832,6 @@ console.log(sumOfArray(arr));
 Output : 13
 
 ```
-
 
 ```ts
 
