@@ -808,11 +808,22 @@ Output: true
 
 ## 12. Spy Number:
 
+A Spy Number is a number where the sum of its digits equals the product of its digits. In other words, if we multiply all the digits of the number and add them, the result is the same as the number itself.
+
+ex: 1, 2, 3, 4, 5, 6, 7, 8, 9, 22, 123, 132, 213, 231, 312, 321, 1124, 1142, 1214, 1241, 1412, 1421, 2114, 2141, 2411, 4112, 4121, 4211....
+
 ```ts
 
+function isSpyNumber(num) {
+    const digits = num.toString().split('').map(Number);
+    const sum = digits.reduce((acc, curr) => acc + curr, 0);
+    const product = digits.reduce((acc, curr) => acc * curr, 1);
+    return sum === product;
+}
+
+console.log(isSpyNumber(1124));
+
 ```
-
-
 
 ## 13. Reverse Number: 
 
