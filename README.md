@@ -470,7 +470,24 @@ console.log(evenOdd(4));
 
 ```
 
-## 3. Swap two number:
+## 3. Leap Year:
+
+```ts
+
+function isLeapYear(year) {
+    // Leap years are evenly divisible by 4
+    // Unless they are also divisible by 100, but not 400
+  
+    return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
+}
+
+console.log(isLeapYear(2024));
+
+Output: true
+
+```
+
+## 4. Swap two number:
 
 ```ts
 
@@ -525,7 +542,7 @@ Output: "a : 20"
 
 ```
 
-## 4. Factorial: 
+## 5. Factorial: 
 
 ```ts
 
@@ -564,7 +581,7 @@ Output: 720
 
 ```
 
-## 5. Reverse Number: 
+## 6. Reverse Number: 
 
 ```ts
 
@@ -581,7 +598,7 @@ Output: 321
 
 ```
 
-## 6. Conunt the Digit in Number:
+## 7. Conunt the Digit in Number:
 
 ```ts
 
@@ -597,7 +614,7 @@ Output : 2
 
 ```
 
-## 7. Sum of Digit:
+## 8. Sum of Digit:
 
 ```ts
 
@@ -619,7 +636,7 @@ Output : 9
 
 ```
 
-## 8. Sum of array:
+## 9. Sum of array:
 
 ```ts
 const arr = [3,6,2,1,8,6];
