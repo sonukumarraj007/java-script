@@ -542,7 +542,7 @@ Output: "a : 20"
 
 ```
 
-## 5. Random Number between two given min and max number:
+## 5. Generator Random Number between given min and max number:
 
 ```ts
 
@@ -640,9 +640,32 @@ console.log(fibonacciSeries(5));
 
 ```
 
-## 8. 
+## 8. Prime number:
 
 ```ts
+
+function isPrimeNumber(num) {
+    
+    // Check if the number is less than 2 (not a prime number)
+    if (num < 2) {
+        return false;
+    }
+     
+    // Iterate from 2 to half of the number
+    for (let i = 2; i <= num / 2; i++) {
+        // If the number is divisible by any integer between 2 and half of itself, it's not prime
+        if (num % i === 0) {
+            return false;
+        }
+    }
+    
+    // If the number is not divisible by any integer between 2 and half of itself, it's prime
+    return true;
+}
+
+console.log(isPrimeNumber(18));
+
+Output: true
 
 ```
 
