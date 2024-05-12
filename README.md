@@ -454,8 +454,23 @@ Output : 13
 
 ```
 
+## 2. Even or Odd number:
 
+```ts
 
+function evenOdd(num){
+  if(num===0){
+    return "It's Zero."
+  }else if(num!==0 && num % 2 === 0 ){
+    return `${num} is Even No.`;
+  }else{
+    return `${num} is Odd No.`;
+  }
+}
+
+console.log(evenOdd(4));
+
+```
 
 
 
