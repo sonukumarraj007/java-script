@@ -370,35 +370,45 @@ Arrow functions do not include any prototype property, and they cannot be used w
 Before Arrow:
 
 ```ts
+
 hello = function() {
   return "Hello World!";
 }
+
 ```
 
 With Arrow Function:
 
 ```ts
+
 hello = () => {
   return "Hello World!";
 }
+
 ```
 
 Arrow Functions Return Value by Default:
 
 ```ts
+
 hello = () => "Hello World!";
+
 ```
 
 Arrow Function With Parameters:
 
 ```ts
+
 hello = (val) => "Hello " + val;
+
 ```
 
 In fact, if you have only one parameter, you can skip the parentheses as well:
 
 ```ts
+
 hello = val => "Hello " + val;
+
 ```
 
 
@@ -460,7 +470,62 @@ console.log(evenOdd(4));
 
 ```
 
-## 3. Factorial: 
+## 3. Swap two number:
+
+```ts
+
+let a = 10;
+let b = 20;
+
+let temp = a;
+a = b;
+b = temp;
+
+console.log("a : " +a);
+console.log("b : " +b);
+
+Output: "a : 20"
+        "b : 10"
+
+```
+
+Without third variable:
+
+```ts
+
+let a = 10;
+let b = 20;
+
+a = a + b;
+b = a - b;
+a = a - b;
+
+console.log("a : " +a);
+console.log("b : " +b);
+
+Output: "a : 20"
+        "b : 10"
+
+```
+
+Using destructuring assignment:
+
+```ts
+
+let a = 10;
+let b = 20;
+
+[a, b] = [b, a];
+
+console.log("a : " +a);
+console.log("b : " +b);
+
+Output: "a : 20"
+        "b : 10"
+
+```
+
+## 4. Factorial: 
 
 ```ts
 
@@ -499,7 +564,7 @@ Output: 720
 
 ```
 
-## 4. Sum of array:
+## 6. Sum of array:
 
 ```ts
 const arr = [3,6,2,1,8,6];
