@@ -402,7 +402,12 @@ hello = val => "Hello " + val;
 ```
 
 
-## Sum of array : [3,6,2,1,8,6]
+## 1. Sum of array:
+
+```ts
+const arr = [3,6,2,1,8,6];
+
+```
 
 ```ts
 
