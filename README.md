@@ -542,7 +542,22 @@ Output: "a : 20"
 
 ```
 
-## 5. Factorial: 
+## 5. Random Number between two given min and max number:
+
+```ts
+
+function randomNumber(min, max) {
+    const random = Math.random();
+    const scaled = random * (max - min) + min;
+  
+    return parseInt(scaled);
+}
+
+console.log(randomNumber(1,5));
+
+```
+
+## 6. Factorial: 
 
 ```ts
 
@@ -581,7 +596,7 @@ Output: 720
 
 ```
 
-## 6. Reverse Number: 
+## 7. Reverse Number: 
 
 ```ts
 
@@ -598,7 +613,7 @@ Output: 321
 
 ```
 
-## 7. Conunt the Digit in Number:
+## 8. Conunt the Digit in Number:
 
 ```ts
 
@@ -614,7 +629,7 @@ Output : 2
 
 ```
 
-## 8. Sum of Digit:
+## 9. Sum of Digit:
 
 ```ts
 
@@ -636,7 +651,7 @@ Output : 9
 
 ```
 
-## 9. Sum of array:
+## 10. Sum of array:
 
 ```ts
 const arr = [3,6,2,1,8,6];
