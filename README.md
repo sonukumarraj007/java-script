@@ -482,9 +482,34 @@ Output: 25
 
 ```
 
-## 4. 
+## 4. Area of a triangle:
+
+To calculate the area of a triangle, you can use Heron's formula, given the lengths of its three sides, denoted as 
+𝑎, 𝑏, and 𝑐 where s is the semi-perimeter of the triangle:
+
+s = (a + b + c) / 2 ;
+
+Area = sqrt (s × (s−a) × (s−b) × (s−c) );
 
 ```ts
+
+function areaOfTriangle(a, b, c) {
+    // Calculate the semi-perimeter
+    const s = (a + b + c) / 2;
+    
+    // Calculate the area using Heron's formula
+    const area = Math.sqrt(s * (s - a) * (s - b) * (s - c));
+    
+    return area;
+}
+
+const sideA = 3;
+const sideB = 4;
+const sideC = 5;
+
+console.log(areaOfTriangle(sideA, sideB, sideC));
+
+Output: 6
 
 ```
 
