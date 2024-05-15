@@ -1351,3 +1351,15 @@ Output: "Kumar Sonu am I"
 
 ## How to check if String is Palindrome?
 
+```ts
+
+function isPalindrome(str) {
+  let reversedStr = str.toLowerCase().split('').reverse().join('');
+  
+  return str === reversedStr;
+}
+
+console.log(isPalindrome('aba'));
+
+```
+
