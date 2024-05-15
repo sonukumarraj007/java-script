@@ -1138,6 +1138,53 @@ Output: [1, 2, 3, 4, 5, 6, 7]
 
 ```
 
+## Print Odd and Even Number from an Array
 
+```ts
+
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+let oddNumbers = [];
+let evenNumbers = [];
+
+numbers.forEach(number => {
+  if (number % 2 === 0) {
+    evenNumbers.push(number);
+  } else {
+    oddNumbers.push(number);
+  }
+});
+
+console.log("Odd Numbers:", oddNumbers); 
+console.log("Even Numbers:", evenNumbers);
+
+Output: Odd Numbers: [1, 3, 5, 7, 9]
+Output: Even Numbers: [2, 4, 6, 8, 10]
+
+```
+
+```ts
+
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+let oddNumbers = numbers.filter(number => number % 2 !== 0);
+let evenNumbers = numbers.filter(number => number % 2 === 0);
+
+```
+
+```ts
+
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+let { oddNumbers, evenNumbers } = numbers.reduce((acc, number) => {
+  if (number % 2 === 0) {
+    acc.evenNumbers.push(number);
+  } else {
+    acc.oddNumbers.push(number);
+  }
+  return acc;
+}, { oddNumbers: [], evenNumbers: [] });
+
+```
 
 
