@@ -1318,5 +1318,35 @@ console.log(transposed);
 
 ```
 
+## How to find the missing number in integer array of 1 to 100?
+
+The expected sum of numbers from 1 to 100 can be calculated using the formula for the sum of an arithmetic series: 
+
+n×(n+1) / 2 , where n is the last number in the series (in this case, 100).
+
+```ts
+
+function findMissingNumber(arr) {
+  // Calculate the sum of numbers from 1 to 100
+  let expectedSum = (100 * 101) / 2; // Sum of an arithmetic series formula: n*(n+1)/2
+
+  // Calculate the sum of numbers in the array
+  let actualSum = arr.reduce((sum, num) => sum + num, 0);
+
+  // Find the missing number
+  let missingNumber = expectedSum - actualSum;
+
+  return missingNumber;
+}
+
+// Example usage
+
+let numbersArray = [1, 2, 3, /*...*/, 99, 100]; // Array containing numbers from 1 to 100 with one missing number
+
+let missingNumber = findMissingNumber(numbersArray);
+
+console.log("Missing number:", missingNumber);
+
+```
 
 
