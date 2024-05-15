@@ -1025,6 +1025,16 @@ const result = str.split(" ").reverse().join(" ");
 
 console.log(result);
 
+Output: "Kumar Sonu am I"
+
+```
+
+## typeof
+
+```ts
+console.log(typeof "str");
+
+Output: "string"
 ```
 
 
