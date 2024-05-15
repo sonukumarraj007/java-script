@@ -1387,3 +1387,24 @@ let stringWithoutDuplicates = removeDuplicates(inputString);
 console.log(stringWithoutDuplicates); // Output: "helo wrd"
 
 ```
+
+## How to check if two Strings are anagrams of each other?
+
+```ts
+
+function areAnagrams(str1, str2) {
+  // Remove non-alphanumeric characters and convert to lowercase
+  str1 = str1.replace(/[^a-z0-9]/g, '').toLowerCase();
+  str2 = str2.replace(/[^a-z0-9]/g, '').toLowerCase();
+
+  str1 = str1.split('').sort().join('');
+  str2 = str2.split('').sort().join('');
+
+  return str1 === str2;
+}
+
+console.log(areAnagrams("listen", "silent")); // Output: true
+
+console.log(areAnagrams("hello", "world")); // Output: false
+
+```
