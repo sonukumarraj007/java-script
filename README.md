@@ -1015,7 +1015,17 @@ Output : 13
 
 ```
 
+## 21. str = I am Sonu Kumar make it to "Kumar Sonu am I"
 
+```ts
+
+const str = "I am Sonu Kumar"
+
+const result = str.split(" ").reverse().join(" ");
+
+console.log(result);
+
+```
 
 
 
