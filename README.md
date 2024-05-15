@@ -1408,3 +1408,29 @@ console.log(areAnagrams("listen", "silent")); // Output: true
 console.log(areAnagrams("hello", "world")); // Output: false
 
 ```
+
+## How to find duplicate characters in a String?
+
+```ts
+
+function findDuplicates(str) {
+  let duplicates = [];
+  
+  for (let i = 0; i < str.length; i++) {
+    let char = str[i];
+    if (str.indexOf(char) !== i && !duplicates.includes(char)) {
+      duplicates.push(char);
+    }
+  }
+  
+  return duplicates;
+}
+
+// Example usage
+let inputString = "hello world";
+let duplicateChars = findDuplicates(inputString);
+
+console.log("Duplicate characters:", duplicateChars); // Output: ["l", "o"]
+
+
+```
