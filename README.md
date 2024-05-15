@@ -1363,3 +1363,27 @@ console.log(isPalindrome('aba'));
 
 ```
 
+
+## How to remove duplicate characters from String?
+
+```ts
+
+function removeDuplicates(str) {
+  let result = '';
+
+  for (let char of str) {
+    if (!result.includes(char)) {
+      result += char;
+    }
+  }
+
+  return result;
+}
+
+// Example usage
+let inputString = "hello world";
+let stringWithoutDuplicates = removeDuplicates(inputString);
+
+console.log(stringWithoutDuplicates); // Output: "helo wrd"
+
+```
