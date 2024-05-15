@@ -1036,17 +1036,52 @@ console.log(typeof "str");
 
 Output: "string"
 
+
+```
+
+## reversing an array
+
+```ts
 let array = [1, 2, 3, 4, 5];
 
 console.log(array.reverse());
 
+Output : [5, 4, 3, 2, 1]
 
 ```
 
+## largest number in an array
 
+```ts
 
+let numbers = [10, 5, 8, 22, 18];
 
+let maxNumber = Math.max(...numbers);
+console.log(maxNumber);
 
+Output: 22
+
+```
+
+```ts
+
+let maxNumber = numbers.reduce((max, current) => (current > max ? current : max), numbers[0]);
+
+```
+
+```ts
+
+let maxNumber = numbers[0];
+
+numbers.forEach(number => {
+  if (number > maxNumber) {
+    maxNumber = number;
+  }
+});
+
+console.log(maxNumber);
+
+```
 
 
 
