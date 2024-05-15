@@ -1083,6 +1083,20 @@ console.log(maxNumber);
 
 ```
 
+## Find 2nd Largest Number in an Array
+
+```ts
+
+let numbers = [10, 5, 8, 22, 18];
+
+const sortedNumber = numbers.sort((a,b)=> b-a)
+
+console.log(sortedNumber[1]);
+
+Output: 18
+
+```
+
 
 
 
