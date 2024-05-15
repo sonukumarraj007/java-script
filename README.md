@@ -1187,4 +1187,51 @@ let { oddNumbers, evenNumbers } = numbers.reduce((acc, number) => {
 
 ```
 
+## Add Two Matrices
+
+```ts
+function addMatrices(matrixA, matrixB) {
+  // Ensure matrices have the same dimensions
+  if (matrixA.length !== matrixB.length || matrixA[0].length !== matrixB[0].length) {
+    throw new Error('Matrices must have the same dimensions to be added.');
+  }
+
+  // Initialize the result matrix
+  let resultMatrix = [];
+  
+  for (let i = 0; i < matrixA.length; i++) {
+    resultMatrix[i] = [];
+    for (let j = 0; j < matrixA[i].length; j++) {
+      // Add corresponding elements
+      resultMatrix[i][j] = matrixA[i][j] + matrixB[i][j];
+    }
+  }
+
+  return resultMatrix;
+}
+
+// Example usage
+let matrixA = [
+  [1, 2, 3],
+  [4, 5, 6]
+];
+
+let matrixB = [
+  [7, 8, 9],
+  [10, 11, 12]
+];
+
+let result = addMatrices(matrixA, matrixB);
+
+console.log(result);
+
+// Output: 
+// [
+//   [8, 10, 12],
+//   [14, 16, 18]
+// ]
+
+
+```
+
 
