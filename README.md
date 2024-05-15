@@ -1015,29 +1015,6 @@ Output : 13
 
 ```
 
-## 21. str = I am Sonu Kumar make it to "Kumar Sonu am I"
-
-```ts
-
-const str = "I am Sonu Kumar"
-
-const result = str.split(" ").reverse().join(" ");
-
-console.log(result);
-
-Output: "Kumar Sonu am I"
-
-```
-
-## typeof
-
-```ts
-console.log(typeof "str");
-
-Output: "string"
-
-
-```
 
 ## reversing an array
 
@@ -1348,5 +1325,29 @@ let missingNumber = findMissingNumber(numbersArray);
 console.log("Missing number:", missingNumber);
 
 ```
+## typeof
 
+```ts
+console.log(typeof "str");
+
+Output: "string"
+
+
+```
+
+## str = I am Sonu Kumar make it to "Kumar Sonu am I"
+
+```ts
+
+const str = "I am Sonu Kumar"
+
+const result = str.split(" ").reverse().join(" ");
+
+console.log(result);
+
+Output: "Kumar Sonu am I"
+
+```
+
+## How to check if String is Palindrome?
 
