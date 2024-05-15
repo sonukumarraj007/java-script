@@ -1231,7 +1231,53 @@ console.log(result);
 //   [14, 16, 18]
 // ]
 
-
 ```
 
+## Multiply Two Matrices
+
+```ts
+
+function multiplyMatrices(matrixA, matrixB) {
+  // Check dimensions
+  if (matrixA[0].length !== matrixB.length) {
+    throw new Error('Matrices cannot be multiplied: columns of matrix A must be equal to rows of matrix B.');
+  }
+
+  let resultMatrix = [];
+  for (let i = 0; i < matrixA.length; i++) {
+    resultMatrix[i] = [];
+    for (let j = 0; j < matrixB[0].length; j++) {
+      let sum = 0;
+      for (let k = 0; k < matrixA[0].length; k++) {
+        sum += matrixA[i][k] * matrixB[k][j];
+      }
+      resultMatrix[i][j] = sum;
+    }
+  }
+
+  return resultMatrix;
+}
+
+// Example usage
+let matrixA = [
+  [1, 2, 3],
+  [4, 5, 6]
+];
+
+let matrixB = [
+  [7, 8],
+  [9, 10],
+  [11, 12]
+];
+
+let result = multiplyMatrices(matrixA, matrixB);
+
+console.log(result);
+// Output: 
+// [
+//   [58, 64],
+//   [139, 154]
+// ]
+
+``
 
