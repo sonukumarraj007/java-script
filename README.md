@@ -1097,7 +1097,46 @@ Output: 18
 
 ```
 
+## Remove Duplicate Element in an Array
 
+```ts
+
+let numbers = [1, 2, 3, 4, 4, 5, 6, 6, 7];
+
+let uniqueNumbers = [...new Set(numbers)];
+
+console.log(uniqueNumbers);
+
+``
+
+```ts
+
+let numbers = [1, 2, 3, 4, 4, 5, 6, 6, 7];
+
+let uniqueNumbers = numbers.filter((value, index, self) => self.indexOf(value) === index);
+
+console.log(uniqueNumbers);
+
+Output: [1, 2, 3, 4, 5, 6, 7]
+
+```
+
+```ts
+
+let numbers = [1, 2, 3, 4, 4, 5, 6, 6, 7];
+
+let uniqueNumbers = numbers.reduce((acc, value) => {
+  if (!acc.includes(value)) {
+    acc.push(value);
+  }
+  return acc;
+}, []);
+
+console.log(uniqueNumbers);
+
+Output: [1, 2, 3, 4, 5, 6, 7]
+
+```
 
 
 
