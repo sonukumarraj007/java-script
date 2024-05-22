@@ -20,11 +20,18 @@
 * [Conunt the digit in number](#conunt-the-digit-in-number)
 * [Sum of digit](#sum-of-digit)
 
-<hr>
-
 ## Array Programs:
 
 * [Sum of array](#sum-of-array)
+* [Reverse the array](#reverse-the-array)
+* [Largest number in an array / Smallest number in an array](#largest-number-in-an-array)
+* [Find 2nd largest number in an array / 2nd smallest number in an array](#find-2nd-largest-number-in-an-array)
+* [Remove duplicate element in an array](#remove-duplicate-element-in-an-array)
+* [Print odd and even number from an array](#print-odd-and-even-number-from-an-array)
+* [Add two matrices](#add-two-matrices)
+* [Multiply two matrices](#multiply-two-matrices)
+* [Transpose matrix](#transpose-matrix)
+* [How to find the missing number in integer array of 1 to 100](#how-to-find-the-missing-number-in-integer-array-of-1-to-100)
 
 <ol>
 			<li>How to reverse array in place in Java?</li>
@@ -1020,7 +1027,7 @@ Output : 13
 ```
 
 
-## reversing an array
+## Reverse the array
 
 ```ts
 let array = [1, 2, 3, 4, 5];
@@ -1031,7 +1038,7 @@ Output : [5, 4, 3, 2, 1]
 
 ```
 
-## largest number in an array
+## Largest number in an array
 
 ```ts
 
@@ -1064,7 +1071,7 @@ console.log(maxNumber);
 
 ```
 
-## Find 2nd Largest Number in an Array
+## Find 2nd largest number in an Array
 
 ```ts
 
@@ -1078,7 +1085,7 @@ Output: 18
 
 ```
 
-## Remove Duplicate Element in an Array
+## Remove duplicate element in an array
 
 ```ts
 
@@ -1119,7 +1126,7 @@ Output: [1, 2, 3, 4, 5, 6, 7]
 
 ```
 
-## Print Odd and Even Number from an Array
+## Print odd and even number from an array
 
 ```ts
 
@@ -1168,7 +1175,7 @@ let { oddNumbers, evenNumbers } = numbers.reduce((acc, number) => {
 
 ```
 
-## Add Two Matrices
+## Add two matrices
 
 ```ts
 function addMatrices(matrixA, matrixB) {
@@ -1214,7 +1221,7 @@ console.log(result);
 
 ```
 
-## Multiply Two Matrices
+## Multiply two matrices
 
 ```ts
 
@@ -1299,7 +1306,7 @@ console.log(transposed);
 
 ```
 
-## How to find the missing number in integer array of 1 to 100?
+## How to find the missing number in integer array of 1 to 100
 
 The expected sum of numbers from 1 to 100 can be calculated using the formula for the sum of an arithmetic series: 
 
