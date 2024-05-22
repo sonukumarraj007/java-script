@@ -33,27 +33,7 @@
 * [Transpose matrix](#transpose-matrix)
 * [How to find the missing number in integer array of 1 to 100](#how-to-find-the-missing-number-in-integer-array-of-1-to-100)
 
-<ol>
-			<li>How to reverse array in place in Java?</li>
-			<li>Find Largest Number in an Array</li>
-			<li>Find 2nd Largest Number in an Array</li>
-			<li>Find 3rd Largest Number in an Array</li>
-			<li>Find Smallest Number in an Array</li>
-			<li>Find 2nd Smallest Number in an Array</li>
-			<li>Find 3rd Smallest Number in an Array</li>
-			<li>Remove Duplicate Element in an Array</li>
-			<li>Print Odd and Even Number from an Array</li>
-			<li>Add Two Matrices</li>
-			<li>Multiply Two Matrices</li>
-			<li>Transpose matrix</li>
-			<li>How to find the missing number in integer array of 1 to 100?</li>
-</ol>
-<hr>
-
-## Test
-
-
-## String Program
+## String Programs:
 
 <ol>
 			<li>How to check if String is Palindrome?</li>
