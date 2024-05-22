@@ -1,12 +1,7 @@
 ## Basic Program
 
+* [Basic operation using callback](#basic-operation-using-callback)
 
-### Fetch a branch from someone else's fork
-
-
-* [Test](#test)
-* [Test 2](#test-url)
-* [Fetch a branch from someone else's fork](#fetch-a-branch-from-someone-elses-fork)
 
 <ol>
     		<li>sum, substraction, multiplication, divison and mod</li>
@@ -425,7 +420,7 @@ hello = val => "Hello " + val;
 ```
 
 
-## 1. Callback example:
+## Basic operation using callback
 
 ```ts
 
