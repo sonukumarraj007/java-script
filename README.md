@@ -1,6 +1,25 @@
 ## Basic Program
 
 * [Basic operation using callback](#basic-operation-using-callback)
+* [Area of a circle](#area-of-a-circle)
+* [Area of a square](#area-of-a-square)
+* [Area of a triangle](#area-of-a-triangle)
+* [Celsius to fahrenheit](#celsius-to-fahrenheit)
+* [Leap year](#leap-year)
+* [Even or Odd number](#even-or-odd-number)
+* [Swap two number](#swap-two-number)
+* [Generator random number between given min and max value](#generator-random-number-between-given-min-and-max-value)
+* [Factorial](#factorial)
+* [Fibonacci series](#fibonacci-series)
+* [Prime number](#prime-number)
+* [Palindrome number](#palindrome-number)
+* [Armstrong number](#armstrong-number)
+* [Strong number](#strong-number)
+* [Spy number](#spy-number)
+* [Reverse number](#reverse-number)
+* [Conunt the digit in number](#conunt-the-digit-in-number)
+* [Sum of digit](#sum-of-digit)
+* [Sum of array](#sum-of-array)
 
 
 <ol>
@@ -458,7 +477,7 @@ Output: 16
 
 ```
 
-## 2. Area of a circle:
+## Area of a circle
 
 Area = π × radius x radius
 
@@ -474,7 +493,7 @@ Output: 78.53981633974483
 
 ```
 
-## 3. Area of a square:
+## Area of a square
 
 Area = side x side
 
@@ -490,7 +509,7 @@ Output: 25
 
 ```
 
-## 4. Area of a triangle:
+## Area of a triangle
 
 To calculate the area of a triangle, you can use Heron's formula, given the lengths of its three sides, denoted as 
 𝑎, 𝑏, and 𝑐 where s is the semi-perimeter of the triangle:
@@ -521,7 +540,7 @@ Output: 6
 
 ```
 
-## 5. Celsius to fahrenheit:
+## Celsius to fahrenheit
 
 To convert Celsius to Fahrenhei:
 
@@ -542,7 +561,7 @@ Output: "38°C is equal to 100.4°F"
 
 ```
 
-## 6. Leap Year:
+## Leap year
 
 ```ts
 
@@ -559,7 +578,7 @@ Output: true
 
 ```
 
-## 7. Even or Odd number:
+## Even or odd number
 
 ```ts
 
@@ -579,7 +598,7 @@ console.log(evenOdd(4));
 
 ```
 
-## 8. Swap two number:
+## Swap two number
 
 ```ts
 
@@ -634,7 +653,7 @@ Output: "a : 20"
 
 ```
 
-## 9. Generator Random Number between given min and max number:
+## Generator random number between given min and max value
 
 ```ts
 
@@ -649,7 +668,7 @@ console.log(randomNumber(1,5));
 
 ```
 
-## 10. Factorial: 
+## Factorial
 
 ```ts
 
@@ -688,7 +707,7 @@ Output: 720
 
 ```
 
-## 11. Fibonacci series:
+## Fibonacci series:
 
 ```ts
 
@@ -732,7 +751,7 @@ console.log(fibonacciSeries(5));
 
 ```
 
-## 12. Prime number:
+## Prime number
 
 ```ts
 
@@ -814,7 +833,7 @@ Output: [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47]
 ```
 
 
-## 13. Palindrome number:
+## Palindrome number
 
 ```ts
 
@@ -831,7 +850,7 @@ Outout: true
 
 ```
 
-## 14. Armstrong number:
+## Armstrong number
 
 An Armstrong number (also known as narcissistic number, plenary number, or plus perfect number) is a number that is equal to the sum of its own digits each raised to the power of the number of digits. For example, 153 is an Armstrong number because 
 
@@ -861,7 +880,7 @@ Output: true
 
 ```
 
-## 15. Strong Number:
+## Strong number
 
 A strong number (also known as a factorial sum number or Krishnamurthy number) is a number whose sum of the factorial of its digits is equal to the number itself. For example, 145 is a strong number because
 
@@ -898,7 +917,7 @@ Output: true
 
 ```
 
-## 16. Spy Number:
+## Spy number
 
 A Spy Number is a number where the sum of its digits equals the product of its digits. In other words, if we multiply all the digits of the number and add them, the result is the same as the number itself.
 
@@ -917,7 +936,7 @@ console.log(isSpyNumber(1124));
 
 ```
 
-## 17. Reverse Number: 
+## Reverse number 
 
 ```ts
 
@@ -934,7 +953,7 @@ Output: 321
 
 ```
 
-## 18. Conunt the Digit in Number:
+## Conunt the digit in number
 
 ```ts
 
@@ -950,7 +969,7 @@ Output : 2
 
 ```
 
-## 19. Sum of Digit:
+## Sum of digit
 
 ```ts
 
@@ -972,7 +991,7 @@ Output : 9
 
 ```
 
-## 20. Sum of array:
+## Sum of array
 
 ```ts
 const arr = [3,6,2,1,8,6];
