@@ -35,6 +35,8 @@
 
 ## String Programs:
 
+* [How to check if String is Palindrome](#How to check if String is Palindrome)
+
 <ol>
 			<li>How to check if String is Palindrome?</li>
 			<li>How to remove duplicate characters from String?</li>
