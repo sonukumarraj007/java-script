@@ -35,7 +35,7 @@
 
 ## String Programs:
 
-* [Reverse the words like "I am Sonu Kumar"to "Kumar Sonu am I"](#reverse-the-words-like-I-am-Sonu-Kumar-to-Kumar-Sonu-am-I)
+* [Reverse the words like "I am Sonu Kumar"to "Kumar Sonu am I"](#reverse-the-words-like-i-am-sonu-kumar-to-kumar-sonu-am-i)
 * [How to check string is palindrome](#how-to-check-string-is-palindrome)
 
 <ol>
@@ -1020,7 +1020,7 @@ console.log(maxNumber);
 
 ```
 
-## Find 2nd largest number in an Array
+## Find 2nd largest number in an array
 
 ```ts
 
@@ -1325,7 +1325,7 @@ console.log(isPalindrome('aba'));
 ```
 
 
-## How to remove duplicate characters from String?
+## How to remove duplicate characters from string
 
 ```ts
 
@@ -1349,7 +1349,7 @@ console.log(stringWithoutDuplicates); // Output: "helo wrd"
 
 ```
 
-## How to check if two Strings are anagrams of each other?
+## How to check if two strings are anagrams of each other
 
 ```ts
 
@@ -1370,7 +1370,7 @@ console.log(areAnagrams("hello", "world")); // Output: false
 
 ```
 
-## How to find duplicate characters in a String?
+## How to find duplicate characters in a string
 
 ```ts
 
