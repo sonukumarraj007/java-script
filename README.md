@@ -35,8 +35,8 @@
 
 ## String Programs:
 
-* [Reverse the words like "I am Sonu Kumar"to "Kumar Sonu am I"]()
-* [How to check string is palindrome](#How to check string is palindrome)
+* [Reverse the words like "I am Sonu Kumar"to "Kumar Sonu am I"](#reverse-the-words-like-I-am-Sonu-Kumar-to-Kumar-Sonu-am-I)
+* [How to check string is palindrome](#how-to-check-string-is-palindrome)
 
 <ol>
 			<li>How to check if String is Palindrome?</li>
