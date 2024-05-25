@@ -42,10 +42,6 @@
 * [How to find duplicate characters in a string](#how-to-find-duplicate-characters-in-a-string)
 
 <ol>
-			<li>How to check if String is Palindrome?</li>
-			<li>How to remove duplicate characters from String?</li>
-			<li>How to Print duplicate characters from String? </li>
-			<li>How to check if two Strings are anagrams of each other?</li>
 			<li>How to program to print first non repeated character from String?</li>
 			<li>How to reverse String in Java using Iteration and Recursion?</li>
 			<li>How to check if a String contains only digits?</li>
