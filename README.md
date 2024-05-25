@@ -37,6 +37,9 @@
 
 * [Reverse the words like](#reverse-the-words-like)
 * [How to check string is palindrome](#how-to-check-string-is-palindrome)
+* [How to remove duplicate characters from string](#how-to-remove-duplicate-characters-from-string)
+* [How to check if two strings are anagrams of each other](#how-to-check-if-two-strings-are-anagrams-of-each-other)
+* [How to find duplicate characters in a string](#how-to-find-duplicate-characters-in-a-string)
 
 <ol>
 			<li>How to check if String is Palindrome?</li>
