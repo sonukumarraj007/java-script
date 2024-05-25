@@ -35,7 +35,7 @@
 
 ## String Programs:
 
-* [Reverse the words like "I am Sonu Kumar"to "Kumar Sonu am I](#reverse-the-words-like)
+* [Reverse the words like](#reverse-the-words-like)
 * [How to check string is palindrome](#how-to-check-string-is-palindrome)
 
 <ol>
@@ -1296,7 +1296,9 @@ Output: "string"
 
 ```
 
-## Reverse the words like "I am Sonu Kumar"to "Kumar Sonu am I"
+## Reverse the words like
+
+"I am Sonu Kumar"to "Kumar Sonu am I"
 
 ```ts
 
