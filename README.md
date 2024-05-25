@@ -35,7 +35,8 @@
 
 ## String Programs:
 
-* [How to check if String is Palindrome](#How to check if String is Palindrome)
+* [Reverse the words like "I am Sonu Kumar"to "Kumar Sonu am I"]()
+* [How to check string is palindrome](#How to check string is palindrome)
 
 <ol>
 			<li>How to check if String is Palindrome?</li>
@@ -1287,6 +1288,7 @@ console.log("Missing number:", missingNumber);
 ## typeof
 
 ```ts
+
 console.log(typeof "str");
 
 Output: "string"
@@ -1294,7 +1296,7 @@ Output: "string"
 
 ```
 
-## str = I am Sonu Kumar make it to "Kumar Sonu am I"
+## Reverse the words like "I am Sonu Kumar"to "Kumar Sonu am I"
 
 ```ts
 
@@ -1308,7 +1310,7 @@ Output: "Kumar Sonu am I"
 
 ```
 
-## How to check if String is Palindrome?
+## How to check string is palindrome
 
 ```ts
 
