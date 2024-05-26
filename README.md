@@ -1,3 +1,6 @@
+- #### [Variables and Data Types](/variablesDataTypes.md)
+- #### [Operators](/Operators.md)
+
 ## Basic Programs:
 
 * [Basic operation using callback](#basic-operation-using-callback)
