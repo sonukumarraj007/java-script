@@ -144,3 +144,62 @@ data.postdata.forEach(item => {
 console.log(allImgeUrl);
 
 ```
+
+## Count transaction with customer id and convert into given format [{cust : x , trans : [x,y]}]
+
+```ts
+var trx = [{
+    transaction: 1,
+    customer: 100,
+    amount: 100
+},
+{
+    transaction: 2,
+    customer: 105,
+    amount: 100
+},
+{
+    transaction: 3,
+    customer: 100,
+    amount: 50
+},
+{
+    transaction: 4,
+    customer: 45,
+    amount: 750
+},
+{
+    transaction: 5,
+    customer: 45,
+    amount: 750
+}
+];
+
+```
+
+```ts
+
+for(let i=0; i<trx.length; i++){
+	for(let j=1; j<i; j++){
+		if(trx[i].customer == trx[j].customer){
+    			console.log(j, " j : ", trx[j])
+			}
+	}
+}
+
+```
+
+### Convert into object of array ['Sonu', 'Vikash','Anshu','Udit', 'Sandeep'] like { 'name': value }
+
+```ts
+
+let name_list = ['Sonu', 'Vikash','Rahul','Anshu','Udit', 'Sandeep']
+let obj1 = [];
+
+name_list.forEach(item=>{
+	obj1.push({name: item})
+})
+
+```
+
+### 
