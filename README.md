@@ -53,7 +53,7 @@
 			<li>How to count number of vowels and consonants in a String?</li>
 			<li>How to reverse words in a sentence without using library method?</li>
 			<li>Write a program to check if a String contains another String e.g. indexOf()?</li>
-			<li>How to return highest occurred character in a String?</li>
+		
 			
 
 </ol>
