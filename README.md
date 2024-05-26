@@ -1793,3 +1793,21 @@ console.log("Target:", target);
 console.log("Index of target:", binarySearch(array, target)); // Output: 4
 
 ```
+
+
+```ts
+
+function printTriangle(rows) {
+    for (let i = 1; i <= rows; i++) {
+        let row = '';
+        for (let j = 1; j <= i; j++) {
+            row += "*";
+        }
+  
+        console.log(row);
+    }
+}
+
+printTriangle(4);
+
+```
