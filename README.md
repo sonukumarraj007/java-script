@@ -46,15 +46,7 @@
 * [How to return highest occurring character in a string](#how-to-return-highest-occurring-character-in-a-string)
 * [How to check a string contains another string](#how-to-check-a-string-contains-another-string)
 * [How to count number of vowels and consonants in a string](#how-to-count-number-of-vowels-and-consonants-in-a-string)
-
-<ol>
-			<li>How to program to print first non repeated character from String?</li>
-			<li>How to reverse String in Java using Iteration and Recursion?</li>
-			<li>How to check if a String contains only digits?</li>
-			<li>How to find duplicate characters in a String?</li>
-			<li>How to count number of vowels and consonants in a String?</li>
-</ol>
-<hr>
+* [Print first non repeated character from string](#print-first-non-repeated-character-from-string)
 
 ## Pattern Program
 
@@ -1558,5 +1550,36 @@ let str = "Hello World!";
 let counts = countVowelsAndConsonants(str);
 console.log("Vowels:", counts.vowels); // Output: 3
 console.log("Consonants:", counts.consonants); // Output: 7
+
+```
+
+## Print first non repeated character from string
+
+```ts
+
+function firstNonRepeatedCharacter(str) {
+  
+    const charCount = {};
+    
+    // Iterate through the string and update character counts
+    for (let char of str) {
+        charCount[char] = (charCount[char] || 0) + 1;
+    }
+    
+    // Find the first non-repeated character
+    for (let char of str) {
+        if (charCount[char] === 1) {
+            return char;
+        }
+    }
+    
+    return null;
+}
+
+let str = "hello world";
+console.log(firstNonRepeatedCharacter(str)); // Output: "h"
+
+str = "hello";
+console.log(firstNonRepeatedCharacter(str)); // Output: "h"
 
 ```
