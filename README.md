@@ -44,6 +44,8 @@
 * [To sort an array of strings based on their lengths](#to-sort-an-array-of-strings-based-on-their-lengths)
 * [How to remove a given characters from string](#how-to-remove-a-given-characters-from-string)
 * [How to return highest occurring character in a string](#how-to-return-highest-occurring-character-in-a-string)
+* [How to check a string contains another string](#how-to-check-a-string-contains-another-string)
+* [How to count number of vowels and consonants in a string](#how-to-count-number-of-vowels-and-consonants-in-a-string)
 
 <ol>
 			<li>How to program to print first non repeated character from String?</li>
@@ -51,11 +53,6 @@
 			<li>How to check if a String contains only digits?</li>
 			<li>How to find duplicate characters in a String?</li>
 			<li>How to count number of vowels and consonants in a String?</li>
-			<li>How to reverse words in a sentence without using library method?</li>
-			<li>Write a program to check if a String contains another String e.g. indexOf()?</li>
-		
-			
-
 </ol>
 <hr>
 
@@ -1503,5 +1500,63 @@ console.log(highestOccurringCharacter(str)); // Output: "l"
 
 str = "aabbbccde";
 console.log(highestOccurringCharacter(str)); // Output: "b"
+
+```
+
+## How to check a string contains another string
+
+```ts
+
+function containsSubstring(str, substr) {
+    return str.includes(substr);
+}
+
+let string = "hello world";
+let substring = "world";
+console.log(containsSubstring(string, substring)); // Output: true
+
+substring = "world!";
+console.log(containsSubstring(string, substring)); // Output: false
+
+```
+
+```ts
+
+function containsSubstring(str, substr) {
+    return str.indexOf(substr) !== -1;
+}
+
+```
+
+## How to count number of vowels and consonants in a string
+
+```ts
+function countVowelsAndConsonants(str) {
+    // Convert the string to lowercase to simplify comparison
+    str = str.toLowerCase();
+    
+    // Define a set of vowels
+    const vowelSet = new Set(['a', 'e', 'i', 'o', 'u']);
+    
+    // Use reduce to count vowels and consonants
+    const counts = str.split('').reduce((acc, char) => {
+        if (/[a-z]/.test(char)) {
+            if (vowelSet.has(char)) {
+                acc.vowels++;
+            } else {
+                acc.consonants++;
+            }
+        }
+        return acc;
+    }, { vowels: 0, consonants: 0 });
+
+    return counts;
+}
+
+// Example usage:
+let str = "Hello World!";
+let counts = countVowelsAndConsonants(str);
+console.log("Vowels:", counts.vowels); // Output: 3
+console.log("Consonants:", counts.consonants); // Output: 7
 
 ```
