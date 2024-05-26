@@ -65,46 +65,6 @@
 			<li>*<br>**<br>***<br>****</li>
 </ol>
 
-## Java Script Interview Question
-
-<ol>
-			<li>var, let, const</li>
-			<li>undefined, null</li>
-			<li> Hoisting <br>
-				soln--> https://scotch.io/tutorials/understanding-hoisting-in-javascript</li>
-			<li>global object- window, this</li>
-			<li>different way to create object and what is the diffenece between all of them.
-				<br>
-				soln-->> https://coderwall.com/p/p5cf5w/different-ways-of-creating-an-object-in-javascript
-			</li>
-			<li>copying and cloning and object assign</li>
-			<li>constructor, opetator"new"</li>
-			<li>map, set, weakmap, and weakset</li>
-			<li>recursion and stack</li>
-			<li>what data structure is used in recursion</li>
-			<li>call/apply/bind</li>
-			<li>rest parameters, spread operator, 'arguments' variable</li>
-			<li>closure, lexical environment
-				<br>
-				closure -->> https://scotch.io/tutorials/understanding-javascript-closures-a-practical-approach
-				<br>
-				Lexical Environment -->> https://scotch.io/turorials/understanding-scope-in-javascript
-			</li>
-			<li>setTimeout, setInterval, Canceling with clearTimeout, recusive setTimeout</li>
-			<li>Currying</li>
-			<li>Class, inheritance, super, Overriding a method, overriding constructor</li>
-			<li>prototypes, methods for prototypes <br>
-				soln-->> http://www.javascripttutorial.net/javascript-prototype/</li>
-			<li> Property flags and descriptors</li>
-			<li>Prototypal inheritance, this <br>
-				soln-->> http://www.javascriptturorial.net/javascript-prototypal-inheritance/</li>
-			<li> Error handling, try, catch, finally</li>
-			<li>Event delegation</li>
-			<li>Bubbling and capturing</li>
-			<li>callbacks, Callback in callback</li>
-			<li>Promise, Promises chaining, Returning promises</li>
-		</ol>
-    <hr>
 
 ## Java Script Program Practice
 
@@ -133,39 +93,7 @@
     <li><a href="https://github.com/sonukumarraj007/java-script/blob/master/program-practice/object-manipulation-examples/11.string-print.js">String print '5'-5 </a></li>
   </ol>
 </details>
-<hr>
 
-
-
-
-## Angular Program List
-
-<ol>
-			<li>Data Binding</li>
-			<li>Directives Examples Component, Structural & Attribute</li>
-			<li>Event Types for Event Binding</li>
-			<li>Create Custom Pipe in Angular</li>
-			<li>Creating Custom Directives</li>
-			<li>ngIf, ngIfElse, ngIfThen</li>
-			<li>NgSwitch</li>
-			<li>NgFor</li>
-			<li>NgClass and NgStyle</li>
-			<li>ng-template with ngTemplateOutlet</li>
-			<li>@Input Decorator </li>
-			<li>@Output Decorator </li>
-			<li>Template deriven form</li>
-			<li>Reactive Forms</li>
-			<li>ViewChild</li>
-			<li>Routes</li>
-			<li>Nested Routes</li>
-			<li>Child Routes</li>
-			<li>HttpClient crud</li>
-			<li>Nested Form using FormArray API with Reactive Forms</li>
-			<li>Show Image Preview with Reactive Forms</li>
-			<li>File Upload with Progress Bar</li>
-			<li>JWT User Authentication</li>
-</ol>
-<hr>
 
 ## Angular Use full links
 
