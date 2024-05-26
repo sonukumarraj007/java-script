@@ -1,0 +1,146 @@
+## Calculate total sum of salary
+
+```ts
+
+let company = {
+	hr: [{
+			name: 'john',
+			salary: 100,
+		},
+		{
+			name: 'alice',
+			salary: 200,
+		},
+	],
+
+	development: {
+		ui: [{
+				name: 'tom',
+				salary: 300,
+			},
+			{
+				name: 'mark',
+				salary: 200,
+			},
+		],
+
+		backend: [{
+			name: 'clark',
+			salary: 400,
+		}, ],
+	},
+};
+
+```
+
+```ts
+
+let total_salary = 0;
+
+company.hr.forEach(item => {
+	total_salary += item.salary
+})
+
+company.development.backend.forEach(item => {
+	total_salary += item.salary
+})
+
+company.development.ui.forEach(item => {
+	total_salary += item.salary
+})
+
+console.log(total_salary);
+
+```
+
+## Store all imgUrl in one array
+
+```ts
+
+let data = {
+	postdata: [{
+			name: 'name1',
+			imgUrl: 'https://img1.png',
+		},
+		{
+			name: 'name2',
+			imgUrl: 'https://img2.png',
+			children: [{
+					name: 'name21',
+					imgUrl: 'https://img21.png',
+				},
+				{
+					name: 'name22',
+					imgUrl: 'https://img22.png',
+				},
+				{
+					name: 'name23',
+					imgUrl: 'https://img23.png',
+				},
+			],
+		},
+		{
+			name: 'name3',
+			imgUrl: 'https://img3.png',
+		},
+		{
+			name: 'name4',
+			imgUrl: 'https://img4.png',
+			children: [{
+					name: 'name41',
+					imgUrl: 'https://img41.png',
+				},
+				{
+					name: 'name42',
+					imgUrl: 'https://img42.png',
+					children: [{
+							name: 'name421',
+							imgUrl: 'https://img421.png',
+						},
+						{
+							name: 'name422',
+							imgUrl: 'https://img422.png',
+						},
+					],
+				},
+				{
+					name: 'name43',
+					imgUrl: 'https://img43.png',
+				},
+			],
+		},
+		{
+			name: 'name5',
+			imgUrl: 'https://img5.png',
+		},
+		{
+			name: 'name6',
+			imgUrl: 'https://img6.png',
+		},
+		{
+			name: 'name7',
+			imgUrl: 'https://img7.png',
+		},
+	],
+};
+
+```
+
+```ts
+
+let allImgeUrl = [];
+
+data.postdata.forEach(item => {
+	allImgeUrl.push(item.imgUrl);
+
+	if (item.children) {
+		item.children.forEach(item => {
+			allImgeUrl.push(item.imgUrl);
+		})
+	}
+
+})
+
+console.log(allImgeUrl);
+
+```
