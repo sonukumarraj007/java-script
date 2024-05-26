@@ -41,6 +41,7 @@
 * [How to check if two strings are anagrams of each other](#how-to-check-if-two-strings-are-anagrams-of-each-other)
 * [How to find duplicate characters in a string](#how-to-find-duplicate-characters-in-a-string)
 * [How to you check two strings are equal](#how-to-you-check-two-strings-are-equal)
+* [To sort an array of strings based on their lengths](#to-sort-an-array-of-strings-based-on-their-lengths)
 
 <ol>
 			<li>How to program to print first non repeated character from String?</li>
@@ -53,8 +54,7 @@
 			<li>How to return highest occurred character in a String?</li>
 			<li>Write a program to remove a given characters from String?</li>
 			<li>Write a program to find longest palindrome in a string?</li>
-			<li>How to sort String on their length in Java?</li>
-			<li>How to Split String in java?</li>
+
 </ol>
 <hr>
 
@@ -1414,5 +1414,19 @@ let str2 = "hello";
 console.log(areStringsEqual(str1, str2)); // Output: false
 console.log(areStringsEqual(str1, str2, true)); // Output: true
 
+```
+
+## To sort an array of strings based on their lengths
+
+```ts
+
+function sortStringsByLength(strings) {
+    return strings.sort((a, b) => a.length - b.length);
+}
+
+let stringArray = ["apple", "banana", "cherry", "date"];
+let sortedArray = sortStringsByLength(stringArray);
+
+console.log(sortedArray); // Output: ["date", "apple", "banana", "cherry"]
 
 ```
