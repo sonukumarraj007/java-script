@@ -48,26 +48,20 @@
 * [How to count number of vowels and consonants in a string](#how-to-count-number-of-vowels-and-consonants-in-a-string)
 * [Print first non repeated character from string](#print-first-non-repeated-character-from-string)
 
+## Sorting Programs:
+
+* [Bubble sort](#bubble-sort)
+* [Selection sort](#selection-sort)
+* [Insertion sort](#insertion-sort)
+* [Quick sort](#quick-sort)
+* [Linear search](#linear-search)
+* [Binary search](#binary-search)
+
 ## Pattern Program
 
 <ol>
 			<li>*<br>**<br>***<br>****</li>
 </ol>
-<hr>
-
-## Sorting Program
-
-<ol>
-			<li>Bubble Sort</li>
-			<li>Selection Sort</li>
-			<li>Insertion Sort</li>
-			<li>QuickSort</li>
-			<li>Linear Search</li>
-			<li>Binary Search</li>
-</ol>
-<hr>
-
-
 
 ## Java Script Interview Question
 
@@ -1581,5 +1575,33 @@ console.log(firstNonRepeatedCharacter(str)); // Output: "h"
 
 str = "hello";
 console.log(firstNonRepeatedCharacter(str)); // Output: "h"
+
+```
+
+```ts
+
+function bubbleSort(arr) {
+    const n = arr.length;
+    let swapped;
+
+    do {
+        swapped = false;
+        for (let i = 0; i < n - 1; i++) {
+            if (arr[i] > arr[i + 1]) {
+                // Swap elements if they are in the wrong order
+                let temp = arr[i];
+                arr[i] = arr[i + 1];
+                arr[i + 1] = temp;
+                swapped = true;
+            }
+        }
+    } while (swapped);
+
+    return arr;
+}
+
+let array = [5, 3, 8, 1, 4];
+console.log("Original array:", array);
+console.log("Sorted array:", bubbleSort(array));
 
 ```
