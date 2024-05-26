@@ -1,5 +1,0 @@
-## String Programs
-
-```ts
-hvhvhj
-```
