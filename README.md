@@ -1605,3 +1605,191 @@ console.log("Original array:", array);
 console.log("Sorted array:", bubbleSort(array));
 
 ```
+
+## Bubble sort
+
+```ts
+
+function bubbleSort(arr) {
+    const n = arr.length;
+    let swapped;
+
+    do {
+        swapped = false;
+        for (let i = 0; i < n - 1; i++) {
+            if (arr[i] > arr[i + 1]) {
+                // Swap elements if they are in the wrong order
+                let temp = arr[i];
+                arr[i] = arr[i + 1];
+                arr[i + 1] = temp;
+                swapped = true;
+            }
+        }
+    } while (swapped);
+
+    return arr;
+}
+
+let array = [5, 3, 8, 1, 4];
+
+console.log("Original array:", array);
+console.log("Sorted array:", bubbleSort(array));
+
+```
+
+## Selection sort
+
+```ts
+
+function selectionSort(arr) {
+    const n = arr.length;
+
+    for (let i = 0; i < n - 1; i++) {
+        // Find the index of the minimum element in the unsorted part of the array
+        let minIndex = i;
+        for (let j = i + 1; j < n; j++) {
+            if (arr[j] < arr[minIndex]) {
+                minIndex = j;
+            }
+        }
+
+        // Swap the minimum element with the first element of the unsorted part
+        if (minIndex !== i) {
+            let temp = arr[i];
+            arr[i] = arr[minIndex];
+            arr[minIndex] = temp;
+        }
+    }
+
+    return arr;
+}
+
+let array = [5, 3, 8, 1, 4];
+console.log("Original array:", array);
+console.log("Sorted array:", selectionSort(array));
+
+```
+
+## Insertion sort
+
+```ts
+
+function insertionSort(arr) {
+    const n = arr.length;
+
+    for (let i = 1; i < n; i++) {
+        let key = arr[i];
+        let j = i - 1;
+
+        // Move elements of arr[0..i-1] that are greater than key to one position ahead of their current position
+        while (j >= 0 && arr[j] > key) {
+            arr[j + 1] = arr[j];
+            j--;
+        }
+        arr[j + 1] = key;
+    }
+
+    return arr;
+}
+
+let array = [5, 3, 8, 1, 4];
+console.log("Original array:", array);
+console.log("Sorted array:", insertionSort(array));
+
+```
+
+## Quick sort
+
+```ts
+
+function quickSort(arr) {
+    if (arr.length <= 1) {
+        return arr; // Base case: array with 0 or 1 element is already sorted
+    }
+
+    // Select a pivot element
+    const pivot = arr[Math.floor(Math.random() * arr.length)];
+    
+    // Partition the array into two sub-arrays around the pivot
+    const left = [];
+    const right = [];
+    const equal = [];
+    for (let element of arr) {
+        if (element < pivot) {
+            left.push(element);
+        } else if (element > pivot) {
+            right.push(element);
+        } else {
+            equal.push(element);
+        }
+    }
+    
+    // Recursively sort the sub-arrays
+    return [...quickSort(left), ...equal, ...quickSort(right)];
+}
+
+let array = [5, 3, 8, 1, 4];
+console.log("Original array:", array);
+console.log("Sorted array:", quickSort(array));
+
+```
+
+## Linear search
+
+```ts
+
+function linearSearch(arr, target) {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === target) {
+            return i; // Return the index if the target element is found
+        }
+    }
+    return -1; // Return -1 if the target element is not found in the array
+}
+
+let array = [5, 3, 8, 1, 4];
+let target = 8;
+
+console.log("Array:", array);
+console.log("Target:", target);
+console.log("Index of target:", linearSearch(array, target)); // Output: 2
+
+```
+
+## Binary search
+
+```ts
+
+function binarySearch(arr, target) {
+    let left = 0;
+    let right = arr.length - 1;
+
+    while (left <= right) {
+        let mid = Math.floor((left + right) / 2);
+
+        // Check if the target is equal to the middle element
+        if (arr[mid] === target) {
+            return mid; // Return the index if target is found
+        }
+
+        // If target is greater than the middle element, ignore the left half
+        if (arr[mid] < target) {
+            left = mid + 1;
+        } 
+        // If target is less than the middle element, ignore the right half
+        else {
+            right = mid - 1;
+        }
+    }
+
+    return -1; // Return -1 if target is not found in the array
+}
+
+let array = [1, 3, 4, 5, 8];
+let target = 8;
+
+console.log("Array:", array);
+console.log("Target:", target);
+console.log("Index of target:", binarySearch(array, target)); // Output: 4
+
+```
