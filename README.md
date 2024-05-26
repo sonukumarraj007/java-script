@@ -42,6 +42,7 @@
 * [How to find duplicate characters in a string](#how-to-find-duplicate-characters-in-a-string)
 * [How to you check two strings are equal](#how-to-you-check-two-strings-are-equal)
 * [To sort an array of strings based on their lengths](#to-sort-an-array-of-strings-based-on-their-lengths)
+* [How to remove a given characters from string](#how-to-remove-a-given-characters-from-string)
 
 <ol>
 			<li>How to program to print first non repeated character from String?</li>
@@ -52,8 +53,7 @@
 			<li>How to reverse words in a sentence without using library method?</li>
 			<li>Write a program to check if a String contains another String e.g. indexOf()?</li>
 			<li>How to return highest occurred character in a String?</li>
-			<li>Write a program to remove a given characters from String?</li>
-			<li>Write a program to find longest palindrome in a string?</li>
+			
 
 </ol>
 <hr>
@@ -1428,5 +1428,42 @@ let stringArray = ["apple", "banana", "cherry", "date"];
 let sortedArray = sortStringsByLength(stringArray);
 
 console.log(sortedArray); // Output: ["date", "apple", "banana", "cherry"]
+
+```
+
+## How to remove a given characters from string
+
+```ts
+
+function removeCharacters(str, charsToRemove) {
+    let result = str.split('').filter(char => !charsToRemove.includes(char)).join('');
+    return result;
+}
+
+let originalString = "hello world";
+let charsToRemove = "lo";
+
+let result = removeCharacters(originalString, charsToRemove);
+console.log(result); // Output: "he wrd"
+
+```
+
+```ts
+
+function removeCharacters(str, charsToRemove) {
+    let result = '';
+    for (let char of str) {
+        if (!charsToRemove.includes(char)) {
+            result += char;
+        }
+    }
+    return result;
+}
+
+let originalString = "hello world";
+let charsToRemove = "lo";
+
+let result = removeCharacters(originalString, charsToRemove);
+console.log(result); // Output: "he wrd"
 
 ```
