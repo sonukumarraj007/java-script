@@ -202,4 +202,111 @@ name_list.forEach(item=>{
 
 ```
 
-### 
+### Remove duplicate elememt and convert into object of array
+
+```ts
+
+// convert into object of array
+// {
+// 	'name': value
+// }
+
+let name_list = ['Sonu', 'Vikash','Anshu','Udit', 'Sandeep', 'Sonu', 'Anshu'];
+let obj = [];
+let tmp= new Set(name_list);
+
+
+tmp.forEach(item=>{
+	obj.push({name: item})
+})
+
+console.log(obj);
+
+```
+
+### Convert into object of array { 'label': 'Sonu', 'value': 'Sonu' }
+
+```ts
+
+// convert into object of array
+// {
+// 	'label': 'Sonu', 'value': 'Sonu'
+// }
+
+let name_list = ['Sonu', 'Rahul', 'Vikash','Anshu','Udit', 'Sandeep']
+let obj = [];
+
+name_list.forEach(item=>{
+	obj.push({label: item, value: item})
+})
+console.log(obj);
+
+```
+
+### Get all name value and convert into object of array
+
+```ts
+
+// Get all name value and convert into object of array
+// {
+// 	'label': 'Sonu', 'value': 'Sonu'
+// }
+
+let name_list = [
+	{
+		'id': 1,
+		'name': 'Sonu'
+	},
+	{
+		'id': 2,
+		'name': 'Anshu'
+	},
+	{
+		'id': 3,
+		'name': 'Vikash'
+	},
+	{
+		'id': 4,
+		'name': 'Rahul'
+	},
+	
+]
+
+let obj = [];
+
+name_list.forEach(item=>{
+	obj.push({label: item.name, value: item.name})
+})
+
+console.log(obj);
+
+```
+
+### Merge to object
+
+```ts
+
+// Use a spread operator ( ...)
+// Use the Object.assign() method
+
+let obj1 = {
+	name: 'Sonu',
+	age: 26,
+  };
+  
+  let obj2 = {
+	hobby: 'Criket',
+	mobil: 5687654,
+	name: 'Sonu kumar',
+  };
+  
+  console.log({ ...obj1, ...obj2 });
+   
+```
+
+```ts
+
+console.log(Object.assign(obj1, obj2));
+
+```
+
