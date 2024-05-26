@@ -43,6 +43,7 @@
 * [How to you check two strings are equal](#how-to-you-check-two-strings-are-equal)
 * [To sort an array of strings based on their lengths](#to-sort-an-array-of-strings-based-on-their-lengths)
 * [How to remove a given characters from string](#how-to-remove-a-given-characters-from-string)
+* [How to return highest occurring character in a string](#how-to-return-highest-occurring-character-in-a-string)
 
 <ol>
 			<li>How to program to print first non repeated character from String?</li>
@@ -1465,5 +1466,42 @@ let charsToRemove = "lo";
 
 let result = removeCharacters(originalString, charsToRemove);
 console.log(result); // Output: "he wrd"
+
+```
+
+## How to return highest occurring character in a string
+
+```ts
+
+function highestOccurringCharacter(str) {
+    if (str.length === 0) return null;
+
+    let charCount = {};
+    let maxCount = 0;
+    let maxChar = '';
+
+    // Iterate over the string and count occurrences of each character
+    for (let char of str) {
+        if (charCount[char]) {
+            charCount[char]++;
+        } else {
+            charCount[char] = 1;
+        }
+
+        // Update maxCount and maxChar if the current character has a higher count
+        if (charCount[char] > maxCount) {
+            maxCount = charCount[char];
+            maxChar = char;
+        }
+    }
+
+    return maxChar;
+}
+
+let str = "hello world";
+console.log(highestOccurringCharacter(str)); // Output: "l"
+
+str = "aabbbccde";
+console.log(highestOccurringCharacter(str)); // Output: "b"
 
 ```
