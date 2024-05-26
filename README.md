@@ -40,6 +40,7 @@
 * [How to remove duplicate characters from string](#how-to-remove-duplicate-characters-from-string)
 * [How to check if two strings are anagrams of each other](#how-to-check-if-two-strings-are-anagrams-of-each-other)
 * [How to find duplicate characters in a string](#how-to-find-duplicate-characters-in-a-string)
+* [How to you check two strings are equal](#how-to-you-check-two-strings-are-equal)
 
 <ol>
 			<li>How to program to print first non repeated character from String?</li>
@@ -53,7 +54,6 @@
 			<li>Write a program to remove a given characters from String?</li>
 			<li>Write a program to find longest palindrome in a string?</li>
 			<li>How to sort String on their length in Java?</li>
-			<li>How do you check if two Strings are equal in Java?</li>
 			<li>How to Split String in java?</li>
 </ol>
 <hr>
@@ -1393,6 +1393,26 @@ let inputString = "hello world";
 let duplicateChars = findDuplicates(inputString);
 
 console.log("Duplicate characters:", duplicateChars); // Output: ["l", "o"]
+
+```
+
+## How to you check two strings are equal
+
+```ts
+
+function areStringsEqual(string1, string2, caseInsensitive = false) {
+    if (caseInsensitive) {
+        return string1.toLowerCase() === string2.toLowerCase();
+    } else {
+        return string1 === string2;
+    }
+}
+
+let str1 = "Hello";
+let str2 = "hello";
+
+console.log(areStringsEqual(str1, str2)); // Output: false
+console.log(areStringsEqual(str1, str2, true)); // Output: true
 
 
 ```
