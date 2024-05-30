@@ -2,7 +2,7 @@
 - #### [Angular Program List](/angularProgramList.md)
 - #### [Angular Use Full Links](/angularUseFullLinks.md)
 - #### [Java Script Interview Question](/javaScriptInterviewQuestion.md)
-- #### [Java Script Program Practice](/JavaScriptProgramPractice.md)
+- #### [Interview Questions Ask.md](/InterviewQuestionsAsk.md)
 
 ## Basic Programs:
 
