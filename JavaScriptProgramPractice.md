@@ -310,3 +310,52 @@ console.log(Object.assign(obj1, obj2));
 
 ```
 
+### Add some property to objrct
+
+```ts
+
+let obj ={
+	'name': 'Sonu Kumar',
+	'age': 25
+}
+
+obj.roll_no = "12345"
+console.log(obj);
+
+output: {
+  age: 25,
+  name: "Sonu Kumar",
+  roll_no: "12345"
+}
+
+```
+
+### Delete some property to objrct
+
+```ts
+
+let obj ={
+	'name': 'Kumar',
+	'age': 25,
+	'roll_no': 12345
+}
+
+delete obj.name;
+console.log(obj);
+
+output: {
+  age: 25,
+  roll_no: 12345
+}
+
+```
+
+### String print '5'-5
+
+```ts
+
+console.log('5'-5);
+
+output: 0
+
+```
