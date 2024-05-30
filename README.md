@@ -1,3 +1,52 @@
+## Contents
+
+- #### [Variables and Data Types](/1_variables_and_data_types/variablesDataTypes.md)
+- #### [Operators](/2_Operators/Operators.md)
+- #### [Logic and Control Flow](/3_Logic_and_Control_flow/LogicAndControlFlow.md)
+- #### [Functions](/4_Functions/Functions.md)
+- #### [Hoisting and Closures](/5_Hoisting_and_Closure/HoistingAndClosure.md)
+- #### [Strings in Detail](/6_Strings_in_detail/strings.md)
+- #### [Arrays in Detail](/7_Arrays_in_detail/Arrays.md)
+- #### [Objects in Detail](/8_Objects_in_detail/objects.md)
+- #### [Value vs Reference](/9_Value_vs_Reference/value_vs_reference.md)
+- #### [DOM](/10_DOM/dom.md)
+- #### [Classes, this and new keyword](/11_Classes_this_and_new_keyword/11.md)
+- #### [Asynchronous Concepts](/12_Asynchronous_Concepts/12.md)
+
+## Beginner
+
+- let vs var vs const
+- Difference between function declaration & function expression
+- Primitive data type
+- Coercion
+- Passing by Value vs. Reference
+- Timer function
+- Truthy and Falsy values
+
+## Advanced
+
+- Spread operator
+- Rest syntax
+- Destructuring
+- Higher-Order function
+- Closures
+- call() , apply() and bind()
+- hoisting : hoist a flash i.e move it to the top
+- Currying function
+- Event Bubbling and Capturing
+- Debugging
+- Generator Function
+- Local storage vs Session storage
+- Asynchronous js
+- JavaScript Design Patterns
+- Iterators and generators
+- throttle vs debounce
+- object creation patterns tutorial - factory , constructor pattern, prototype pattern
+- JavaScript ES2020
+- Tricky JavaScript interview questions and answers
+
+## Notes:
+
 - #### [Java Script Basic](/JavaScriptBasic.md)
 - #### [Java Script Notes](/JavaScriptNotes.md)
 - #### [Java Script Interview Ask Question](/JavaScriptInterviewAskQuestion.md)
