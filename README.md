@@ -1,3 +1,4 @@
+- #### [Java Script Notes](/JavaScriptNotes.md)
 - #### [Java Script Interview Ask Question](/JavaScriptInterviewAskQuestion.md)
 - #### [Java Script Interview Ask Program](/JavaScriptInterviewAskProgram.md)
 - #### [Angular Interview Question](/angularInterviewQuestion.md)
