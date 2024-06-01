@@ -359,3 +359,65 @@ console.log('5'-5);
 output: 0
 
 ```
+
+### Transform object of array
+
+```ts
+
+let kvArray = [{key: 1, value: 10},
+               {key: 2, value: 20},
+               {key: 3, value: 30}]
+
+Output : // [{"1":10},{"2":20},{"3":30}]
+
+Solution : let result = kvArray.map(item => ({ [item.key]: item.value }));
+
+```
+
+### remove blank, null, nan, undefined object from array and count the valid and invalid objects 
+
+```ts
+
+let arr = [
+  { id: 15 },
+  { id: -1 },
+  { id: 0 },
+  { id: 3 },
+  { id: 12.2 },
+  { },
+  { id: null },
+  { id: NaN },
+  { id: undefined }
+]
+
+let filteredArray = arr.filter(item => Number.isFinite(item.id));
+
+console.log(filteredArray);
+
+Output :
+[{ id: 15 },
+ { id: -1 },
+ { id: 0 },
+ { id: 3 },
+ { id: 12.2 }
+]
+
+```
+
+```ts
+
+// count the valid and invalid objects
+
+let counts = arr.reduce((result, item) => {
+  if (Number.isFinite(item.id)) {
+    result.validCount++;
+  } else {
+    result.invalidCount++;
+  }
+  return result;
+}, { validCount: 0, invalidCount: 0 });
+
+console.log("Valid Objects:", counts.validCount);
+console.log("Invalid Objects:", counts.invalidCount);
+
+```
