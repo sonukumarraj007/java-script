@@ -1,4 +1,3 @@
-## Notes:
 
 - #### [Java Script Basic](/JavaScriptBasic.md)
 - #### [Java Script Notes](/JavaScriptNotes.md)
