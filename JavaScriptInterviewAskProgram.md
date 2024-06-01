@@ -376,8 +376,6 @@ Solution : let result = kvArray.map(item => ({ [item.key]: item.value }));
 
 ### remove blank, null, nan, undefined object from array and count the valid and invalid objects 
 
-```ts
-
 let arr = [
   { id: 15 },
   { id: -1 },
@@ -389,6 +387,8 @@ let arr = [
   { id: NaN },
   { id: undefined }
 ]
+
+```ts
 
 let filteredArray = arr.filter(item => Number.isFinite(item.id));
 
@@ -487,6 +487,36 @@ var x = 21;
 var xyz = function () {
      console.log(this.x);
      var x = 20;
+};
+xyz();
+
+Output : 21
+
+```
+
+### What will be output
+
+```ts
+
+var x = 21;
+var xyz = function () {
+     var x = 20;
+     console.log(x);
+};
+xyz();
+
+Output : 20
+
+```
+
+### What will be output
+
+```ts
+
+var x = 21;
+var xyz = function () {
+     var x = 20;
+     console.log(this.x);
 };
 xyz();
 
