@@ -376,6 +376,8 @@ Solution : let result = kvArray.map(item => ({ [item.key]: item.value }));
 
 ### remove blank, null, nan, undefined object from array and count the valid and invalid objects 
 
+```ts
+
 let arr = [
   { id: 15 },
   { id: -1 },
@@ -387,6 +389,8 @@ let arr = [
   { id: NaN },
   { id: undefined }
 ]
+
+```
 
 ```ts
 
