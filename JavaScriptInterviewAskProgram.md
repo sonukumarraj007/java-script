@@ -421,3 +421,75 @@ console.log("Valid Objects:", counts.validCount);
 console.log("Invalid Objects:", counts.invalidCount);
 
 ```
+
+### What will be output
+
+```ts
+
+setTimeout(() => {
+  console.log('test');
+  setTimeout(() => {
+	console.log('dummy');
+	}, 100);
+}, 10);
+
+console.log('testing');
+
+Output :
+
+"testing"
+"test"
+"dummy"
+
+```
+
+### What will be output
+
+```ts
+
+setTimeout(() => {
+  console.log('test');
+  setTimeout(() => {
+	console.log('dummy');
+	}, 10);
+}, 1000);
+
+console.log('testing');
+
+Output :
+
+"testing"
+"test"
+"dummy"
+
+```
+
+### What will be output
+
+```ts
+
+var x = 21;
+var xyz = function () {
+     console.log(x);
+     var x = 20;
+};
+xyz();
+
+Output : undefined
+
+```
+
+### What will be output
+
+```js
+
+var x = 21;
+var xyz = function () {
+     console.log(this.x);
+     var x = 20;
+};
+xyz();
+
+Output : 21
+
+```
