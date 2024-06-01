@@ -1,3 +1,10 @@
+## Notes:
+
+- #### [Java Script Basic](/JavaScriptBasic.md)
+- #### [Java Script Notes](/JavaScriptNotes.md)
+- #### [Java Script Interview Ask Question](/JavaScriptInterviewAskQuestion.md)
+- #### [Java Script Interview Ask Program](/JavaScriptInterviewAskProgram.md)
+
 ## Beginner
 
 - let vs var vs const
@@ -44,16 +51,6 @@
 - #### [DOM](/10_DOM/dom.md)
 - #### [Classes, this and new keyword](/11_Classes_this_and_new_keyword/11.md)
 - #### [Asynchronous Concepts](/12_Asynchronous_Concepts/12.md)
-
-## Notes:
-
-- #### [Java Script Basic](/JavaScriptBasic.md)
-- #### [Java Script Notes](/JavaScriptNotes.md)
-- #### [Java Script Interview Ask Question](/JavaScriptInterviewAskQuestion.md)
-- #### [Java Script Interview Ask Program](/JavaScriptInterviewAskProgram.md)
-- #### [Angular Interview Question](/angularInterviewQuestion.md)
-- #### [Angular Program List](/angularProgramList.md)
-- #### [Angular Use Full Links](/angularUseFullLinks.md)
 
 ## Basic Programs:
 
