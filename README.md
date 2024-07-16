@@ -1,8 +1,6 @@
 
 - #### [Java Script Basic](/JavaScriptBasic.md)
 - #### [Java Script Notes](/JavaScriptNotes.md)
-- #### [Java Script Interview Ask Question](/JavaScriptInterviewAskQuestion.md)
-- #### [Java Script Interview Ask Program](/JavaScriptInterviewAskProgram.md)
 
 ## Beginner
 
