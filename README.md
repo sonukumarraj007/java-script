@@ -2106,7 +2106,6 @@ Output : 21
 
 ```
 
-```ts
 
 ## Java Script Interview Question
 
@@ -2149,9 +2148,6 @@ Output : 21
 			<li>Promise, Promises chaining, Returning promises</li>
 		</ol>
 
-
-
-```
 
 
 
