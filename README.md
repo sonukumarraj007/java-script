@@ -78,6 +78,7 @@
 * [Largest number in an array / Smallest number in an array](#largest-number-in-an-array)
 * [Find 2nd largest number in an array / 2nd smallest number in an array](#find-2nd-largest-number-in-an-array)
 * [Remove duplicate element in an array](#remove-duplicate-element-in-an-array)
+* [To count the occurrences of each digit in the given array](#to-count-the-occurrences-of-each-digit-in-the-given-array)
 * [Print odd and even number from an array](#print-odd-and-even-number-from-an-array)
 * [Add two matrices](#add-two-matrices)
 * [Multiply two matrices](#multiply-two-matrices)
@@ -814,6 +815,22 @@ let uniqueNumbers = numbers.reduce((acc, value) => {
 console.log(uniqueNumbers);
 
 Output: [1, 2, 3, 4, 5, 6, 7]
+
+```
+
+## To count the occurrences of each digit in the given array
+
+```ts
+
+const array = [1, 2, 3, 3];
+
+const occurrences = array.reduce((acc, number) => {
+  acc[number] = (acc[number] || 0) + 1;
+  return acc;
+}, {});
+
+Output: { 1: 1, 2: 1, 3: 2 }
+
 
 ```
 
