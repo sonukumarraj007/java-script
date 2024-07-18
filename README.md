@@ -141,6 +141,121 @@ typeof null returns "object".
 
 ```
 
+## Hoisting
+
+Hoisting is a JavaScript mechanism where variable and function declarations are moved to the top of their containing scope during the compile phase. 
+This means that variables and functions can be used before they are declared. However, there are important nuances to understand about how 
+hoisting works with var, let, const, and function declarations.
+
+### Variable Hoisting
+
+**var Hoisting**
+
+- Variables declared with var are hoisted to the top of their function scope.
+
+- During hoisting, the declaration is moved to the top, but the assignment remains in place.
+
+- The variable is initialized with undefined at the top of the scope.
+
+```ts
+
+console.log(a); // undefined
+var a = 5;
+console.log(a); // 5
+
+// The above code is interpreted as:
+var a;
+console.log(a); // undefined
+a = 5;
+console.log(a); // 5
+
+```
+
+
+**let and const Hoisting**
+
+- Variables declared with let and const are also hoisted, but they are not initialized.
+
+- Accessing them before the declaration results in a ReferenceError.
+
+- This temporal dead zone (TDZ) exists from the start of the block until the declaration is encountered.
+
+```ts
+console.log(b); // ReferenceError: Cannot access 'b' before initialization
+let b = 5;
+console.log(b); // 5
+
+console.log(c); // ReferenceError: Cannot access 'c' before initialization
+const c = 5;
+console.log(c); // 5
+
+
+```
+
+### Function Hoisting
+
+**Function Declarations**
+
+- Function declarations are hoisted to the top of their scope.
+  
+- This means you can call the function before its declaration.
+
+```ts
+console.log(add(2, 3)); // 5
+
+function add(x, y) {
+  return x + y;
+}
+
+// The above code is interpreted as:
+function add(x, y) {
+  return x + y;
+}
+console.log(add(2, 3)); // 5
+
+```
+
+
+**Function Expressions**
+
+- Function expressions (both with var, let, and const) are not hoisted.
+
+- Only the variable declaration is hoisted, not the function definition.
+
+```ts
+
+console.log(subtract(5, 2)); // TypeError: subtract is not a function
+
+var subtract = function(x, y) {
+  return x - y;
+};
+
+console.log(subtract(5, 2)); // 3
+
+// The above code is interpreted as:
+var subtract;
+console.log(subtract(5, 2)); // TypeError: subtract is not a function
+subtract = function(x, y) {
+  return x - y;
+};
+console.log(subtract(5, 2)); // 3
+
+```
+
+**With let and const:**
+
+```ts
+console.log(multiply(2, 3)); // ReferenceError: Cannot access 'multiply' before initialization
+
+let multiply = function(x, y) {
+  return x * y;
+};
+
+console.log(multiply(2, 3)); // 6
+
+
+```
+
 
 
 
