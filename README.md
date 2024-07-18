@@ -686,6 +686,240 @@ runOperations();
 - **Avoiding Callback Hell:** Use named functions, Promises, or async/await to write cleaner asynchronous code.
 
 
+## Promises
+
+Promises are a modern JavaScript feature that provide a more elegant way to handle asynchronous operations compared to callbacks. 
+They represent a value that may be available now, or in the future, or never. A promise can be in one of three states:
+
+- **Pending:** Initial state, neither fulfilled nor rejected.
+
+- **Fulfilled:** Operation completed successfully.
+
+- **Rejected:** Operation failed.
+
+```ts
+
+const promise = new Promise((resolve, reject) => {
+  // Asynchronous operation
+  if (/* success */) {
+    resolve('Success'); // Fulfilled state
+  } else {
+    reject('Error'); // Rejected state
+  }
+});
+
+
+```
+
+
+### Using Promises
+
+Promises can be handled using .then(), .catch(), and .finally() methods.
+
+- **.then(onFulfilled, onRejected):** Attaches callbacks for the resolution and/or rejection of the Promise.
+
+- **.catch(onRejected):** Attaches a callback for only the rejection of the Promise.
+
+- **.finally(onFinally):** Attaches a callback that is invoked when the Promise is settled, regardless of its outcome.
+
+
+```ts
+
+const promise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    const success = true;
+    if (success) {
+      resolve('Operation successful');
+    } else {
+      reject('Operation failed');
+    }
+  }, 1000);
+});
+
+promise
+  .then((result) => {
+    console.log(result); // Output: Operation successful
+  })
+  .catch((error) => {
+    console.error(error);
+  })
+  .finally(() => {
+    console.log('Operation completed'); // Always executed
+  });
+
+```
+
+### Chaining Promises
+
+One of the powerful features of promises is chaining, where you can perform a series of asynchronous operations in sequence.
+
+```ts
+
+const firstOperation = () => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      console.log('First operation complete');
+      resolve('First result');
+    }, 1000);
+  });
+};
+
+const secondOperation = (result) => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      console.log('Second operation complete with:', result);
+      resolve('Second result');
+    }, 1000);
+  });
+};
+
+const thirdOperation = (result) => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      console.log('Third operation complete with:', result);
+      resolve('Third result');
+    }, 1000);
+  });
+};
+
+firstOperation()
+  .then(secondOperation)
+  .then(thirdOperation)
+  .then((finalResult) => {
+    console.log('All operations complete with:', finalResult);
+  })
+  .catch((error) => {
+    console.error('An error occurred:', error);
+  });
+
+
+```
+
+### Handling Multiple Promises
+
+**Promise.all**
+
+**Promise.all** waits for all promises to be resolved (or for any to be rejected).
+
+```ts
+
+const promise1 = Promise.resolve('Promise 1 resolved');
+const promise2 = Promise.resolve('Promise 2 resolved');
+const promise3 = Promise.resolve('Promise 3 resolved');
+
+Promise.all([promise1, promise2, promise3])
+  .then((results) => {
+    console.log(results); // Output: ['Promise 1 resolved', 'Promise 2 resolved', 'Promise 3 resolved']
+  })
+  .catch((error) => {
+    console.error('One of the promises failed:', error);
+  });
+
+
+```
+
+**Promise.race**
+
+**Promise.race** returns the first promise that resolves or rejects.
+
+```ts
+
+const promise1 = new Promise((resolve) => setTimeout(resolve, 500, 'Promise 1 resolved'));
+const promise2 = new Promise((resolve) => setTimeout(resolve, 100, 'Promise 2 resolved'));
+
+Promise.race([promise1, promise2])
+  .then((result) => {
+    console.log(result); // Output: 'Promise 2 resolved'
+  })
+  .catch((error) => {
+    console.error('An error occurred:', error);
+  });
+
+```
+
+**Promise.allSettled**
+
+**Promise.allSettled** waits for all promises to either resolve or reject and returns an array of objects describing the outcome of each promise.
+
+```ts
+
+const promise1 = Promise.resolve('Promise 1 resolved');
+const promise2 = Promise.reject('Promise 2 rejected');
+const promise3 = Promise.resolve('Promise 3 resolved');
+
+Promise.allSettled([promise1, promise2, promise3])
+  .then((results) => {
+    console.log(results);
+    // Output: 
+    // [
+    //   { status: 'fulfilled', value: 'Promise 1 resolved' },
+    //   { status: 'rejected', reason: 'Promise 2 rejected' },
+    //   { status: 'fulfilled', value: 'Promise 3 resolved' }
+    // ]
+  });
+
+```
+
+
+Async/Await
+
+async and await provide a more readable and synchronous-looking way to work with promises. An async function always returns a promise, 
+and await pauses the execution of the function until the promise is resolved or rejected.
+
+
+```ts
+
+function firstOperation() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      console.log('First operation complete');
+      resolve('First result');
+    }, 1000);
+  });
+}
+
+function secondOperation(result) {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      console.log('Second operation complete with:', result);
+      resolve('Second result');
+    }, 1000);
+  });
+}
+
+async function runOperations() {
+  try {
+    const firstResult = await firstOperation();
+    const secondResult = await secondOperation(firstResult);
+    console.log('All operations complete with:', secondResult);
+  } catch (error) {
+    console.error('An error occurred:', error);
+  }
+}
+
+runOperations();
+
+```
+
+
+#### Summary
+
+- **Promises:** Objects representing the eventual completion or failure of an asynchronous operation.
+
+- **Methods:**
+
+  - .then(onFulfilled, onRejected): Handles resolved/rejected promise.
+
+  - .catch(onRejected): Handles rejected promise.
+
+  - .finally(onFinally): Executes callback when promise is settled.
+
+- **Chaining:** Allows for sequential execution of asynchronous operations.
+
+- **Handling Multiple Promises:** Promise.all, Promise.race, Promise.allSettled.
+
+- **Async/Await:** Syntactic sugar for promises, providing a more synchronous code structure for asynchronous operations.
+
 
 
 ## map, set, weakmap, and weakset
