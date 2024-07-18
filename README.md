@@ -314,6 +314,100 @@ console.log(combinedObj); // Output: { a: 1, b: 3, c: 4 }
 ```
 
 
+## Destructuring
+
+Destructuring is a convenient way of extracting values from arrays and objects into distinct variables. This syntax makes it easier to 
+work with complex data structures and can help make your code more readable and concise.
+
+**Array Destructuring**
+
+- **Basic Syntax:** [a, b] = array
+
+```ts
+
+const numbers = [1, 2, 3, 4];
+
+const [first, second] = numbers;
+console.log(first); // Output: 1
+console.log(second); // Output: 2
+
+```
+
+- **Skipping Items:** You can skip elements in the array.
+
+```ts
+
+const numbers = [1, 2, 3, 4];
+
+const [first, , third] = numbers;
+console.log(first); // Output: 1
+console.log(third); // Output: 3
+
+```
+
+- **Rest Syntax:** You can use the rest syntax to collect the remaining items in an array.
+
+```ts
+
+const numbers = [1, 2, 3, 4];
+
+const [first, ...rest] = numbers;
+console.log(first); // Output: 1
+console.log(rest); // Output: [2, 3, 4]
+
+```
+
+#### Object Destructuring
+
+- **Basic Syntax:** {a, b} = object
+
+```ts
+
+const person = { name: 'Alice', age: 25 };
+
+const { name, age } = person;
+console.log(name); // Output: Alice
+console.log(age); // Output: 25
+
+```
+
+- **Renaming Variables:** You can assign new variable names while destructuring.
+
+```ts
+
+const person = { name: 'Alice', age: 25 };
+
+const { name: personName, age: personAge } = person;
+console.log(personName); // Output: Alice
+console.log(personAge); // Output: 25
+
+```
+
+- **Default Values:** You can set default values if the property does not exist in the object.
+
+```ts
+
+const person = { name: 'Alice' };
+
+const { name, age = 30 } = person;
+console.log(name); // Output: Alice
+console.log(age); // Output: 30
+
+```
+
+- **Nested Objects:** You can destructure nested objects.
+
+```ts
+
+const person = { name: 'Alice', address: { city: 'Wonderland', zip: 12345 } };
+
+const { address: { city, zip } } = person;
+console.log(city); // Output: Wonderland
+console.log(zip); // Output: 12345
+
+```
+
+
 ## call, apply, and bind
 
 In JavaScript, call, apply, and bind are methods used to control the value of this inside a function and to pass arguments to functions in different ways. 
