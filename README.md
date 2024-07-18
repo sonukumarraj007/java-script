@@ -256,6 +256,63 @@ console.log(multiply(2, 3)); // 6
 
 ```
 
+## rest parameters and spread operator
+
+### Rest Parameters
+
+- **Description:** Rest parameters allow a function to accept an indefinite number of arguments as an array.
+
+- **Syntax:** function(...rest)
+
+```ts
+
+function sum(...numbers) {
+  return numbers.reduce((acc, curr) => acc + curr, 0);
+}
+
+console.log(sum(1, 2, 3)); // Output: 6
+console.log(sum(1, 2, 3, 4, 5)); // Output: 15
+
+```
+
+### Spread Operator
+
+- **Description:** The spread operator allows an iterable such as an array or string to be expanded in places where zero or more arguments (for function calls) 
+or elements (for array literals) are expected, or an object expression to be expanded in places where zero or more key-value pairs (for object literals) are expected.
+
+- **Syntax:** ...iterable
+
+#### Example: Spread in Function Calls
+
+```ts
+
+const numbers = [1, 2, 3];
+console.log(Math.max(...numbers)); // Output: 3
+
+```
+
+#### Example: Spread in Array Literals
+
+```ts
+
+const array1 = [1, 2, 3];
+const array2 = [4, 5, 6];
+const combinedArray = [...array1, ...array2];
+console.log(combinedArray); // Output: [1, 2, 3, 4, 5, 6]
+
+```
+
+#### Example: Spread in Object Literals
+
+```ts
+
+const obj1 = { a: 1, b: 2 };
+const obj2 = { b: 3, c: 4 };
+const combinedObj = { ...obj1, ...obj2 };
+console.log(combinedObj); // Output: { a: 1, b: 3, c: 4 }
+
+```
+
 
 ## call, apply, and bind
 
