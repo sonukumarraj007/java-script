@@ -3348,11 +3348,8 @@ Output : 21
 			<li> Property flags and descriptors</li>
 			<li>Prototypal inheritance, this <br>
 				soln-->> http://www.javascriptturorial.net/javascript-prototypal-inheritance/</li>
-			<li> Error handling, try, catch, finally</li>
 			<li>Event delegation</li>
 			<li>Bubbling and capturing</li>
-			<li>callbacks, Callback in callback</li>
-			<li>Promise, Promises chaining, Returning promises</li>
    </ol>
 
 
