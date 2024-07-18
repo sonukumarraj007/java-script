@@ -1,3 +1,8 @@
+## [Interview Ask Questions](/interview_ask_questions.md.md)
+
+## [Interview Ask Program](/interview_ask_program.md.md)
+
+
 ## Beginner
 
 - let vs var vs const
@@ -30,8 +35,6 @@
 - JavaScript ES2020
 - Tricky JavaScript interview questions and answers
 
-- #### [Variables and Data Types](/1_variables_and_data_types/variablesDataTypes.md)
-- #### [Operators](/2_Operators/Operators.md)
 
 ## Contents
 
