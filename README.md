@@ -257,6 +257,168 @@ console.log(multiply(2, 3)); // 6
 ```
 
 
+## map, set, weakmap, and weakset
+
+JavaScript provides several built-in objects for storing collections of data, each with its own characteristics and use cases. 
+These include Map, Set, WeakMap, and WeakSet. Here's an overview of each:
+
+### map 
+
+- **Description:** A Map object holds key-value pairs where keys can be of any type (including objects and primitives).
+
+- **Features:**
+
+     - Maintains the order of insertion.
+     - Provides methods for adding, deleting, and iterating over entries.
+ 
+```ts
+
+const map = new Map();
+
+map.set('a', 1);
+map.set('b', 2);
+map.set('c', 3);
+
+console.log(map.get('a')); // 1
+console.log(map.has('b')); // true
+
+map.delete('c');
+console.log(map.size); // 2
+
+map.forEach((value, key) => {
+  console.log(`${key}: ${value}`);
+});
+
+// Output:
+// a: 1
+// b: 2
+
+
+```
+
+### set
+
+- **Description:** A Set object holds unique values of any type, whether primitive values or object references.
+
+- **Features:**
+
+    - Values are unique.
+    - Maintains the order of insertion.
+    - Provides methods for adding, deleting, and iterating over values.
+ 
+```ts
+
+const set = new Set();
+
+set.add(1);
+set.add(2);
+set.add(3);
+set.add(2); // Duplicate value, will be ignored
+
+console.log(set.has(2)); // true
+
+set.delete(3);
+console.log(set.size); // 2
+
+set.forEach(value => {
+  console.log(value);
+});
+
+// Output:
+// 1
+// 2
+
+
+```
+
+### weakmap
+
+- **Description:** A WeakMap object is a collection of key-value pairs where keys must be objects and the values can be of any type.
+
+- **Features:**
+
+  - Keys are weakly referenced, meaning they can be garbage collected if there are no other references to the key objects.
+
+  - Does not prevent garbage collection.
+
+  - No enumeration methods (forEach, keys, values, entries).
+ 
+```ts
+const weakMap = new WeakMap();
+let obj1 = {};
+let obj2 = {};
+
+weakMap.set(obj1, 'value1');
+weakMap.set(obj2, 'value2');
+
+console.log(weakMap.get(obj1)); // 'value1'
+console.log(weakMap.has(obj2)); // true
+
+obj1 = null; // obj1 can be garbage collected
+// obj1 will be removed from the WeakMap at some point
+
+console.log(weakMap.get(obj1)); // undefined
+
+```
+
+### weakset
+
+- **Description:** A WeakSet object is a collection of unique objects.
+
+- **Features:**
+
+   - Objects are weakly referenced, allowing for garbage collection.
+
+   - No enumeration methods (forEach, keys, values, entries).
+
+```ts
+
+const weakSet = new WeakSet();
+let obj1 = {};
+let obj2 = {};
+
+weakSet.add(obj1);
+weakSet.add(obj2);
+
+console.log(weakSet.has(obj1)); // true
+
+obj1 = null; // obj1 can be garbage collected
+// obj1 will be removed from the WeakSet at some point
+
+console.log(weakSet.has(obj1)); // false
+
+```
+
+
+### Summary
+
+- **Map:**
+
+  - Stores key-value pairs.
+  - Keys can be of any type.
+  - Maintains insertion order.
+  - Iterable.
+
+- **Set:**
+
+   - Stores unique values of any type.
+   - Maintains insertion order.
+   - Iterable.
+
+- **WeakMap:**
+
+   - Stores key-value pairs with keys being objects.
+   - Keys are weakly referenced.
+   - Not iterable.
+
+- **WeakSet:**
+  
+   - Stores unique objects.
+   - Objects are weakly referenced.
+   - Not iterable.
+
+Each of these data structures serves different purposes and is suitable for different scenarios depending on the requirements of your application.
+
 
 
 ```ts
@@ -2509,7 +2671,6 @@ Output : 21
 			</li>
 			<li>copying and cloning and object assign</li>
 			<li>constructor, opetator"new"</li>
-			<li>map, set, weakmap, and weakset</li>
 			<li>recursion and stack</li>
 			<li>what data structure is used in recursion</li>
 			<li>call/apply/bind</li>
