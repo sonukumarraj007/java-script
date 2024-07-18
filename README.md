@@ -73,8 +73,8 @@
 
 ## Array Programs:
 
-- #### [Sum of array](#sum-of-array)
-- #### [Reverse the array](#reverse-the-array)
+* [Sum of array](#sum-of-array)
+* [Reverse the array](#reverse-the-array)
 * [Largest number in an array / Smallest number in an array](#largest-number-in-an-array)
 * [Find 2nd largest number in an array / 2nd smallest number in an array](#find-2nd-largest-number-in-an-array)
 * [Remove duplicate element in an array](#remove-duplicate-element-in-an-array)
