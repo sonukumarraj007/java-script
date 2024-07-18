@@ -2846,11 +2846,6 @@ Output : 21
 			</li>
 			<li>copying and cloning and object assign</li>
 			<li>constructor, opetator"new"</li>
-			<li>recursion and stack</li>
-			<li>what data structure is used in recursion</li>
-			<li>call/apply/bind</li>
-			<li>rest parameters, spread operator, 'arguments' variable</li>
-   
 			<li>closure, lexical environment
 				closure -->> https://scotch.io/tutorials/understanding-javascript-closures-a-practical-approach
 				Lexical Environment -->> https://scotch.io/turorials/understanding-scope-in-javascript
