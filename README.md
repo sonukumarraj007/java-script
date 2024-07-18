@@ -2516,9 +2516,7 @@ Output : 21
 			<li>rest parameters, spread operator, 'arguments' variable</li>
    
 			<li>closure, lexical environment
-				<br>
 				closure -->> https://scotch.io/tutorials/understanding-javascript-closures-a-practical-approach
-				<br>
 				Lexical Environment -->> https://scotch.io/turorials/understanding-scope-in-javascript
 			</li>
 			<li>setTimeout, setInterval, Canceling with clearTimeout, recusive setTimeout</li>
@@ -2534,7 +2532,7 @@ Output : 21
 			<li>Bubbling and capturing</li>
 			<li>callbacks, Callback in callback</li>
 			<li>Promise, Promises chaining, Returning promises</li>
-		</ol>
+   </ol>
 
 
 
