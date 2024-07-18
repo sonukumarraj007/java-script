@@ -1,8 +1,11 @@
 
-- #### [Java Script Basic](/JavaScriptBasic.md)
 - #### [Java Script Notes](/JavaScriptNotes.md)
 
+```ts
+
 let arr = [2, 9, 44, 1, 0, -19, 44, 77, 20];
+
+```
 
 ### for loop
 
