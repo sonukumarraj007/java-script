@@ -1,6 +1,5 @@
-## Interview Ask Program
+## Calculate total sum of salary
 
-#### Calculate total sum of salary
 
 ```ts
 
@@ -55,7 +54,8 @@ console.log(total_salary);
 
 ```
 
-#### Store all imgUrl in one array
+## Store all imgUrl in one array
+
 
 ```ts
 
@@ -148,9 +148,11 @@ console.log(allImgeUrl);
 ```
 
 
-#### Count transaction with customer id and convert into given format [{cust : x , trans : [x,y]}]
+## Count transaction with customer id and convert into given format [{cust : x , trans : [x,y]}]
+
 
 ```ts
+
 var trx = [{
     transaction: 1,
     customer: 100,
@@ -180,6 +182,7 @@ var trx = [{
 
 ```
 
+
 ```ts
 
 for(let i=0; i<trx.length; i++){
@@ -192,7 +195,8 @@ for(let i=0; i<trx.length; i++){
 
 ```
 
-#### Convert into object of array ['Sonu', 'Vikash','Anshu','Udit', 'Sandeep'] like { 'name': value }
+## Convert into object of array ['Sonu', 'Vikash','Anshu','Udit', 'Sandeep'] like { 'name': value }
+
 
 ```ts
 
@@ -205,7 +209,8 @@ name_list.forEach(item=>{
 
 ```
 
-#### Remove duplicate elememt and convert into object of array
+## Remove duplicate elememt and convert into object of array
+
 
 ```ts
 
@@ -227,7 +232,8 @@ console.log(obj);
 
 ```
 
-#### Convert into object of array { 'label': 'Sonu', 'value': 'Sonu' }
+## Convert into object of array { 'label': 'Sonu', 'value': 'Sonu' }
+
 
 ```ts
 
@@ -246,7 +252,8 @@ console.log(obj);
 
 ```
 
-#### Get all name value and convert into object of array
+## Get all name value and convert into object of array
+
 
 ```ts
 
@@ -285,7 +292,8 @@ console.log(obj);
 
 ```
 
-#### Merge two object
+## Merge two object
+
 
 ```ts
 
@@ -313,7 +321,8 @@ console.log(Object.assign(obj1, obj2));
 
 ```
 
-#### Add some property to objrct
+## Add some property to objrct
+
 
 ```ts
 
@@ -333,7 +342,8 @@ output: {
 
 ```
 
-#### Delete some property to objrct
+## Delete some property to objrct
+
 
 ```ts
 
@@ -353,7 +363,8 @@ output: {
 
 ```
 
-#### String print '5'-5
+## String print '5'-5
+
 
 ```ts
 
@@ -363,7 +374,9 @@ output: 0
 
 ```
 
-#### Transform object of array
+
+## Transform object of array
+
 
 ```ts
 
@@ -377,7 +390,9 @@ Solution : let result = kvArray.map(item => ({ [item.key]: item.value }));
 
 ```
 
-#### remove blank, null, nan, undefined object from array and count the valid and invalid objects 
+
+## remove blank, null, nan, undefined object from array and count the valid and invalid objects 
+
 
 ```ts
 
@@ -394,6 +409,7 @@ let arr = [
 ]
 
 ```
+
 
 ```ts
 
@@ -429,7 +445,8 @@ console.log("Invalid Objects:", counts.invalidCount);
 
 ```
 
-#### What will be output
+## What will be output
+
 
 ```ts
 
@@ -450,7 +467,8 @@ Output :
 
 ```
 
-#### What will be output
+## What will be output
+
 
 ```ts
 
@@ -471,7 +489,8 @@ Output :
 
 ```
 
-#### What will be output
+## What will be output
+
 
 ```ts
 
@@ -486,7 +505,8 @@ Output : undefined
 
 ```
 
-#### What will be output
+## What will be output
+
 
 ```js
 
@@ -501,7 +521,8 @@ Output : 21
 
 ```
 
-#### What will be output
+## What will be output
+
 
 ```ts
 
@@ -516,7 +537,8 @@ Output : 20
 
 ```
 
-#### What will be output
+## What will be output
+
 
 ```ts
 
