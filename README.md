@@ -2502,10 +2502,6 @@ Output : 21
 ## Java Script Interview Question
 
 <ol>
-			<li>var, let, const</li>
-			<li>undefined, null</li>
-			<li> Hoisting <br>
-				soln--> https://scotch.io/tutorials/understanding-hoisting-in-javascript</li>
 			<li>global object- window, this</li>
 			<li>different way to create object and what is the diffenece between all of them.
 				<br>
