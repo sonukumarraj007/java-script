@@ -257,6 +257,124 @@ console.log(multiply(2, 3)); // 6
 ```
 
 
+## call, apply, and bind
+
+In JavaScript, call, apply, and bind are methods used to control the value of this inside a function and to pass arguments to functions in different ways. 
+These methods are very useful when dealing with methods that need a specific context or when reusing a function with different objects.
+
+### call
+
+- **Description:** The call method calls a function with a given this value and arguments provided individually.
+
+- **Syntax:** function.call(thisArg, arg1, arg2, ...)
+
+```ts
+
+function greet(greeting, punctuation) {
+  console.log(greeting + ', ' + this.name + punctuation);
+}
+
+const person = { name: 'Alice' };
+
+greet.call(person, 'Hello', '!'); // Output: Hello, Alice!
+
+
+```
+
+### apply
+
+- **Description:** The apply method calls a function with a given this value and arguments provided as an array (or an array-like object).
+
+- **Syntax:** function.apply(thisArg, [argsArray])
+
+```ts
+
+function greet(greeting, punctuation) {
+  console.log(greeting + ', ' + this.name + punctuation);
+}
+
+const person = { name: 'Alice' };
+
+greet.apply(person, ['Hello', '!']); // Output: Hello, Alice!
+
+```
+
+### bind
+
+- **Description:** The bind method creates a new function that, when called, has its this keyword set to the provided value, with a given sequence of arguments 
+preceding any provided when the new function is called.
+
+- **Syntax:** function.bind(thisArg, arg1, arg2, ...)
+
+
+```ts
+function greet(greeting, punctuation) {
+  console.log(greeting + ', ' + this.name + punctuation);
+}
+
+const person = { name: 'Alice' };
+
+const greetPerson = greet.bind(person, 'Hello');
+greetPerson('!'); // Output: Hello, Alice!
+
+```
+
+
+#### Summary
+
+- **call:** Immediately invokes the function with a specified this value and arguments provided individually.
+
+   - Use case: When you need to call a function with a specific this value and a known set of arguments.
+
+   
+- **apply:** Immediately invokes the function with a specified this value and arguments provided as an array.
+
+   - Use case: When you need to call a function with a specific this value and an array of arguments (useful for variadic functions).
+
+- **bind:** Creates a new function with a specified this value and initial arguments.
+
+  - Use case: When you need to create a function with a specific this value and optionally preset initial arguments for later use.
+
+
+#### Example with call
+
+
+```ts
+
+function add(a, b) {
+  return a + b;
+}
+
+const result = add.call(null, 2, 3); // 5
+
+```
+
+#### Example with apply
+
+```ts
+
+function add(a, b) {
+  return a + b;
+}
+
+const result = add.apply(null, [2, 3]); // 5
+
+```
+
+#### Example with bind
+
+```ts
+
+function add(a, b) {
+  return a + b;
+}
+
+const addTwo = add.bind(null, 2);
+const result = addTwo(3); // 5
+
+```
+
+
 ## map, set, weakmap, and weakset
 
 JavaScript provides several built-in objects for storing collections of data, each with its own characteristics and use cases. 
