@@ -525,6 +525,168 @@ const result = addTwo(3); // 5
 
 ```
 
+## Callbacks
+
+A callback is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action. 
+Callbacks are commonly used in asynchronous programming, where certain tasks (like data fetching) take time to complete, and you want to run some code only 
+after that task is finished.
+
+```ts
+
+function fetchData(callback) {
+  setTimeout(() => {
+    const data = 'Fetched Data';
+    callback(data);
+  }, 1000);
+}
+
+function handleData(data) {
+  console.log(data);
+}
+
+fetchData(handleData); // After 1 second, "Fetched Data" is logged to the console
+
+```
+
+### Callback in Callback (Nested Callbacks)
+
+When you have multiple asynchronous operations that need to be performed one after the other, you often end up with nested callbacks, also 
+known as "callback hell" or "pyramid of doom." This can make the code hard to read and maintain.
+
+```ts
+
+function firstOperation(callback) {
+  setTimeout(() => {
+    console.log('First operation complete');
+    callback();
+  }, 1000);
+}
+
+function secondOperation(callback) {
+  setTimeout(() => {
+    console.log('Second operation complete');
+    callback();
+  }, 1000);
+}
+
+function thirdOperation(callback) {
+  setTimeout(() => {
+    console.log('Third operation complete');
+    callback();
+  }, 1000);
+}
+
+firstOperation(() => {
+  secondOperation(() => {
+    thirdOperation(() => {
+      console.log('All operations complete');
+    });
+  });
+});
+
+```
+
+In this example, secondOperation is called only after firstOperation is complete, and thirdOperation is called only after secondOperation is complete. 
+The nesting makes the code harder to read and maintain.
+
+
+## Avoiding Callback Hell
+
+
+Promises provide a way to handle asynchronous operations more cleanly than nested callbacks.
+
+```ts
+
+function firstOperation() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      console.log('First operation complete');
+      resolve();
+    }, 1000);
+  });
+}
+
+function secondOperation() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      console.log('Second operation complete');
+      resolve();
+    }, 1000);
+  });
+}
+
+function thirdOperation() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      console.log('Third operation complete');
+      resolve();
+    }, 1000);
+  });
+}
+
+firstOperation()
+  .then(secondOperation)
+  .then(thirdOperation)
+  .then(() => {
+    console.log('All operations complete');
+  });
+
+```
+
+### Using async/await
+
+The async and await keywords allow you to write asynchronous code that looks synchronous, further improving readability.
+
+```ts
+
+function firstOperation() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      console.log('First operation complete');
+      resolve();
+    }, 1000);
+  });
+}
+
+function secondOperation() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      console.log('Second operation complete');
+      resolve();
+    }, 1000);
+  });
+}
+
+function thirdOperation() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      console.log('Third operation complete');
+      resolve();
+    }, 1000);
+  });
+}
+
+async function runOperations() {
+  await firstOperation();
+  await secondOperation();
+  await thirdOperation();
+  console.log('All operations complete');
+}
+
+runOperations();
+
+```
+
+#### Summary
+
+- **Callbacks:** Functions passed as arguments to other functions and invoked after some operation is completed.
+
+- **Callback Hell:** The result of excessive nesting of callbacks, leading to hard-to-read and maintain code.
+
+- **Avoiding Callback Hell:** Use named functions, Promises, or async/await to write cleaner asynchronous code.
+
+
+
 
 ## map, set, weakmap, and weakset
 
