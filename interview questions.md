@@ -1,3 +1,14 @@
+## typeof
+
+```ts
+
+console.log(typeof "str");
+
+Output: "string"
+
+
+```
+
 ## var, let, and const
 
 ### var
