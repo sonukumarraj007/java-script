@@ -1306,3 +1306,135 @@ console.log(weakSet.has(obj1)); // false
 Each of these data structures serves different purposes and is suitable for different scenarios depending on the requirements of your application.
 
 
+
+## Shallow Copy
+
+A shallow copy creates a new object or array, but inserts references into it to the objects found in the original. In other words, 
+it copies the references, not the actual objects. Therefore, if you modify the copied object, you also modify the original one.
+
+### Example of Shallow Copy
+
+```ts
+
+// Original object
+const original = { a: 1, b: { c: 2 } };
+
+// Shallow copy using Object.assign()
+const shallowCopy = Object.assign({}, original);
+
+// Modifying the shallow copy
+shallowCopy.a = 5;
+shallowCopy.b.c = 10; // This modifies original.b.c as well
+
+console.log(original);   // { a: 1, b: { c: 10 } }
+console.log(shallowCopy); // { a: 5, b: { c: 10 } }
+
+```
+
+In this example, shallowCopy is a new object, but its b property still references the same object as original.b. Therefore, modifying shallowCopy.b.c also modifies original.b.c.
+
+
+## Deep Copy
+
+A deep copy creates a new object or array and recursively copies all nested objects and arrays found in the original. In other words, 
+it creates a fully independent copy of the original data structure. Modifying the copied object does not affect the original one, and vice versa.
+
+
+```ts
+
+// Original object
+const original = { a: 1, b: { c: 2 } };
+
+// Deep copy using JSON.parse(JSON.stringify())
+const deepCopy = JSON.parse(JSON.stringify(original));
+
+// Modifying the deep copy
+deepCopy.a = 5;
+deepCopy.b.c = 10; // This does not modify original.b.c
+
+console.log(original);   // { a: 1, b: { c: 2 } }
+console.log(deepCopy);   // { a: 5, b: { c: 10 } }
+
+```
+
+In this example, deepCopy is a completely independent copy of original. Modifying deepCopy.b.c does not affect original.b.c.
+
+### Considerations
+
+- **Performance:** Deep copying can be slower and more memory-intensive, especially for large and deeply nested objects.
+
+- **Circular References:** JSON.stringify() and JSON.parse() do not handle circular references well and will throw an error. For deep copying with 
+circular references, you would need a custom deep copy function that handles such cases.
+
+### Use Cases
+
+- **Shallow Copy:** Useful when you want to quickly create a copy of an object or array where nested objects or arrays can be shared between the original and the copy.
+
+- **Deep Copy:** Necessary when you need to modify a copy without affecting the original, or when dealing with complex data structures that should remain independent of each other.
+
+### Summary
+
+- **Shallow Copy:** Copies references to nested objects; modifications to nested objects affect both the original and the copy.
+
+- **Deep Copy:** Creates independent copies of all nested objects and arrays; modifications to copied data do not affect the original.
+
+
+
+## localStorage and sessionStorage
+
+Both web storage mechanisms provided by modern web browsers to store key-value pairs locally within the user's browser. They are part of the 
+Web Storage API and offer similar functionality but differ in terms of persistence and scope.
+
+### localStorage
+
+- **Persistence:** Data persists even after the browser window is closed and reopened. It is stored indefinitely, unless explicitly deleted by the user or the application.
+
+- **Scope:** Data is scoped to the origin (protocol, host, and port) of the page. This means data stored by one website will not be accessible to another website with a different origin.
+
+- **Storage Limit:** Typically, browsers allow storage of up to 5MB of data in localStorage, but this can vary slightly between browsers.
+
+```ts
+// Store data in localStorage
+localStorage.setItem('key', 'value');
+
+// Retrieve data from localStorage
+const value = localStorage.getItem('key');
+
+// Remove data from localStorage
+localStorage.removeItem('key');
+
+```
+
+### sessionStorage
+
+- **Persistence:** Data persists only for the duration of the page session. When the browser tab or window is closed, the sessionStorage data is cleared.
+
+- **Scope:** Similar to localStorage, sessionStorage data is scoped to the origin (protocol, host, and port) of the page.
+
+- **Storage Limit:** Like localStorage, sessionStorage typically has a storage limit of up to 5MB, but this can vary between browsers.
+
+```ts
+
+// Store data in sessionStorage
+sessionStorage.setItem('key', 'value');
+
+// Retrieve data from sessionStorage
+const value = sessionStorage.getItem('key');
+
+// Remove data from sessionStorage
+sessionStorage.removeItem('key');
+
+```
+
+#### Choosing Between localStorage and sessionStorage
+
+- **Persistence Requirements:** Use localStorage when you need data to persist across browser sessions. Use sessionStorage when data should be available
+   only for the current session.
+
+- **Security Considerations:** Both localStorage and sessionStorage are limited to the same-origin policy, meaning data is accessible only within the same origin.
+   They are not suitable for storing sensitive information such as passwords or tokens due to potential XSS (Cross-Site Scripting) attacks.
+
+- **Usage Scenarios:**
+
+   - localStorage is commonly used for storing preferences, settings, or user-specific data that should persist between visits to the website.
+   - sessionStorage is often used for storing temporary data or state information during a single session, such as shopping cart items or form data that needs to be remembered temporarily.
