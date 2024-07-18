@@ -1,6 +1,6 @@
-## [Interview Ask Questions](/interview_ask_questions.md.md)
+## [Interview Ask Questions](/interview_ask_questions.md)
 
-## [Interview Ask Program](/interview_ask_program.md.md)
+## [Interview Ask Program](/interview_ask_program.md)
 
 
 ## Beginner
