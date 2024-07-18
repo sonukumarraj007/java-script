@@ -1,3 +1,25 @@
+## Interview Questions
+
+<ol>
+			<li>global object- window, this</li>
+			<li>different way to create object and what is the diffenece between all of them.
+			</li>
+			<li>copying and cloning and object assign</li>
+			<li>constructor, opetator"new"</li>
+			<li>closure, lexical environment
+			</li>
+			<li>setTimeout, setInterval, Canceling with clearTimeout, recusive setTimeout</li>
+			<li>Currying</li>
+			<li>Class, inheritance, super, Overriding a method, overriding constructor</li>
+			<li>prototypes, methods for prototypes <br>
+			<li> Property flags and descriptors</li>
+			<li>Prototypal inheritance, this <br>
+			<li>Event delegation</li>
+			<li>Bubbling and capturing</li>
+   </ol>
+
+
+
 ## typeof
 
 ```ts
