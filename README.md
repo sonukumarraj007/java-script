@@ -1,3 +1,88 @@
+## var, let, and const
+
+### var
+
+- **Function Scope:** Variables declared with var are scoped to the function in which they are declared.
+
+- **Hoisting:** var declarations are hoisted to the top of their containing function or global scope. This means you can use the variable before it is declared, but its value will be undefined until the declaration is encountered.
+
+- **Re-declaration:** You can re-declare variables declared with var within the same scope.
+
+```ts
+
+function varExample() {
+  console.log(x); // undefined due to hoisting
+  var x = 5;
+  console.log(x); // 5
+}
+
+varExample();
+
+var y = 10;
+var y = 20; // Re-declaration is allowed
+console.log(y); // 20
+
+```
+
+### let 
+
+- **Block Scope:** Variables declared with let are scoped to the block in which they are declared.
+  
+- **Hoisting:** let declarations are hoisted but not initialized, so using the variable before the declaration results in a ReferenceError.
+  
+- **Re-declaration:** You cannot re-declare variables declared with let within the same scope.
+
+```ts
+
+function letExample() {
+  // console.log(a); // ReferenceError: Cannot access 'a' before initialization
+  let a = 5;
+  console.log(a); // 5
+}
+
+letExample();
+
+let b = 10;
+// let b = 20; // SyntaxError: Identifier 'b' has already been declared
+console.log(b); // 10
+
+
+```
+
+### const
+
+- **Block Scope:** Variables declared with const are scoped to the block in which they are declared.
+
+- **Hoisting:** const declarations are hoisted but not initialized, so using the variable before the declaration results in a ReferenceError.
+
+- **Re-declaration:** You cannot re-declare variables declared with const within the same scope.
+
+- **Immutable Binding:** The value of a const variable cannot be reassigned. However, if the variable holds an object or array, the contents of the object or array can be modified.
+
+```ts
+
+function constExample() {
+  // console.log(c); // ReferenceError: Cannot access 'c' before initialization
+  const c = 5;
+  console.log(c); // 5
+  // c = 10; // TypeError: Assignment to constant variable.
+}
+
+constExample();
+
+const d = 10;
+// const d = 20; // SyntaxError: Identifier 'd' has already been declared
+console.log(d); // 10
+
+const obj = { key: 'value' };
+obj.key = 'newValue'; // Allowed
+console.log(obj.key); // 'newValue'
+
+// obj = { anotherKey: 'anotherValue' }; // TypeError: Assignment to constant variable.
+
+```
+
+
 ```ts
 
 let arr = [2, 9, 44, 1, 0, -19, 44, 77, 20];
