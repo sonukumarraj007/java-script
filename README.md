@@ -82,6 +82,67 @@ console.log(obj.key); // 'newValue'
 
 ```
 
+## undefined, null
+
+### undefined
+
+- **Type:** undefined is a primitive type.
+
+- **Meaning:** A variable that has been declared but has not been assigned a value has the value undefined.
+
+- **Common Uses:**
+
+  - When a variable is declared but not assigned.
+  - When a function does not explicitly return a value.
+  - When accessing a non-existent property of an object.
+  - When a function parameter is not provided.
+ 
+ ```ts
+
+let a;
+console.log(a); // undefined
+
+function doSomething() {}
+console.log(doSomething()); // undefined
+
+let obj = {};
+console.log(obj.nonExistentProperty); // undefined
+
+function greet(name) {
+  console.log(name); // undefined if no argument is passed
+}
+greet();
+
+
+ ```
+
+### null
+
+
+- **Type:** null is a primitive type, but it is often considered an object for historical reasons.
+
+- **Meaning**: null represents the intentional absence of any object value. It is a value that can be assigned to a variable to indicate "no value".
+
+- **Common Uses:**
+    - To explicitly indicate that a variable should have no value.
+    - To reset or clear a variable.
+ 
+```ts
+
+let b = null;
+console.log(b); // null
+
+let obj = { key: 'value' };
+obj.key = null; // Explicitly clearing the value
+console.log(obj.key); // null
+
+typeof undefined returns "undefined".
+typeof null returns "object".
+
+```
+
+
+
 
 ```ts
 
