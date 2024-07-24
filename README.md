@@ -1,21 +1,8 @@
-<style>
-  h1 {
-    color: red;
-  }
-  p {
-    font-size: 20px;
-  }
-</style>
-
 ## [Interview Ask Questions](/interview_ask_questions.md)
 
 ## [Interview Ask Program](/interview_ask_program.md)
 
-
-<ul>
-  <li style="color: green;">First item</li>
-  <li style="color: red;">Second item</li>
-</ul>
+[Basic operation using callback](#basic-operation-using-callback)
 
 ## Beginner
 
@@ -67,7 +54,7 @@
 
 ## Basic Programs:
 
-* [Basic operation using callback](#basic-operation-using-callback)
+
 * [Area of a circle](#area-of-a-circle)
 * [Area of a square](#area-of-a-square)
 * [Area of a triangle](#area-of-a-triangle)
