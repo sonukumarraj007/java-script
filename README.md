@@ -53,7 +53,7 @@
 
 ## Basic Programs:
 
-* ### [Basic operation using callback](#basic-operation-using-callback)
+- ### [Basic operation using callback](#basic-operation-using-callback)
 * [Area of a circle](#area-of-a-circle)
 * [Area of a square](#area-of-a-square)
 * [Area of a triangle](#area-of-a-triangle)
