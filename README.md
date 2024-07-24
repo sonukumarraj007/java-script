@@ -1,9 +1,18 @@
+<style>
+  h1 {
+    color: red;
+  }
+  p {
+    font-size: 20px;
+  }
+</style>
+
 ## [Interview Ask Questions](/interview_ask_questions.md)
 
 ## [Interview Ask Program](/interview_ask_program.md)
 
 
-<ul style="font-size: 1rem;">
+<ul>
   <li style="color: green;">First item</li>
   <li style="color: red;">Second item</li>
 </ul>
