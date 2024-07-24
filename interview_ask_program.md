@@ -552,3 +552,154 @@ xyz();
 Output : 21
 
 ```
+
+## What will be output
+
+```ts
+
+function outer() {
+  let x = 5;
+
+  function inner() {
+    let x = 10;
+    console.log("inner value = "+ x);
+  }
+
+  console.log("outer value = "+ x);
+  inner(); 
+}
+
+outer();
+
+output:
+
+"outer value = 5"
+"inner value = 10"
+
+```
+
+## To combine the two arrays of objects (arr1 and arr2) while ensuring each object has a unique name
+
+```ts
+let arr1 = [
+  { name: "a", degn: "developer" },
+  { name: "b", degn: "developer" },
+  { name: "c", degn: "tester" }
+];
+
+let arr2 = [
+  { name: "a", degn: "developer" },
+  { name: "b", degn: "developer" },
+  { name: "d", degn: "tester" }
+];
+```
+
+
+```ts
+
+function mergeUniqueByName(arr1, arr2) {
+  let map = new Map();
+
+  // Add objects from the first array to the map
+  arr1.forEach(obj => map.set(obj.name, obj));
+
+  // Add objects from the second array to the map (overwriting duplicates)
+  arr2.forEach(obj => map.set(obj.name, obj));
+
+  // Convert the map values back to an array
+  return Array.from(map.values());
+}
+
+let mergedArray = mergeUniqueByName(arrObj1, arrObj2);
+console.log(mergedArray);
+
+
+```
+
+
+**output:**
+
+```ts
+[
+  { name: "a", degn: "developer" },
+  { name: "b", degn: "developer" },
+  { name: "c", degn: "tester" },
+  { name: "d", degn: "tester" }
+]
+
+```
+
+**solution 2:**
+
+```ts
+
+let mergedArray = [...arrObj1, ...arrObj2].reduce((acc, current) => {
+  if (!acc.some(obj => obj.name === current.name)) {
+    acc.push(current);
+  }
+  return acc;
+}, []);
+
+```
+
+## Write a function that generates a random password of a specific length, including uppercase, lowercase letters, numbers, and special characters.
+
+```ts
+
+function generateRandomPassword(length) {
+  const uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  const lowercase = 'abcdefghijklmnopqrstuvwxyz';
+  const numbers = '0123456789';
+  const specialCharacters = '!@#$%^&*()_+[]{}|;:,.<>?';
+  
+  const allCharacters = uppercase + lowercase + numbers + specialCharacters;
+  let password = '';
+
+  // Ensure the password contains at least one of each type of character
+  password += uppercase[Math.floor(Math.random() * uppercase.length)];
+  password += lowercase[Math.floor(Math.random() * lowercase.length)];
+  password += numbers[Math.floor(Math.random() * numbers.length)];
+  password += specialCharacters[Math.floor(Math.random() * specialCharacters.length)];
+
+  // Fill the rest of the password with random characters from allCharacter sets
+  for (let i = password.length; i < length; i++) {
+    password += allCharacters[Math.floor(Math.random() * allCharacters.length)];
+  }
+
+  // Shuffle the password to ensure the first few characters are also random
+  password = password.split('').sort(() => Math.random() - 0.5).join('');
+
+  return password;
+}
+
+
+console.log(generateRandomPassword(4)); // "(5rH"
+console.log(generateRandomPassword(10)); // "J0wjh%_AIn"
+
+```
+
+
+## Generate random password
+
+
+```ts
+
+function generateRandomPassword(length) {
+  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+[]{}|;:,.<>?';
+  let password = '';
+
+  for (let i = 0; i < length; i++) {
+    const randomIndex = Math.floor(Math.random() * characters.length);
+    password += characters[randomIndex];
+  }
+
+  return password;
+}
+
+console.log(generateRandomPassword(4)); //  "3_wh"
+console.log(generateRandomPassword(6)); // "AN[75("
+
+```
+
+
+
