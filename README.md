@@ -379,7 +379,7 @@ Output: "a : 20"
 
 ```
 
-Without third variable:
+**Without third variable:**
 
 ```ts
 
@@ -398,7 +398,7 @@ Output: "a : 20"
 
 ```
 
-Using destructuring assignment:
+**Using destructuring assignment:**
 
 ```ts
 
@@ -451,7 +451,7 @@ Output: 720
 
 ```
 
-Recursive way:
+**Recursive way:**
 
 ```ts
 
@@ -489,7 +489,7 @@ Output: [0, 1, 1, 2, 3]
 
 ```
 
-With recursion : 
+**With recursion:** 
 
 ```ts
 
@@ -765,7 +765,7 @@ const arr = [3,6,2,1,8,6];
 ```ts
 
 function sumOfArray(arr){
-  return arr.reduce((acc,curr) => acc + curr, 0)
+  return arr.reduce((sum, number) => sum + number, 0)
 }
 
 console.log(sumOfArray(arr));
@@ -776,7 +776,7 @@ Output : 13
 
 ```ts
 
-const  sumOfArray = (arr) => arr.reduce((acc,curr) => acc + curr, 0);
+const  sumOfArray = (arr) => arr.reduce((sum, number) => sum + number, 0);
 
 console.log(sumOfArray(arr));
 
@@ -786,7 +786,7 @@ Output : 13
 
 ```ts
 
-const  sumOfArray = arr => arr.reduce((acc,curr) => acc + curr, 0);
+const  sumOfArray = arr => arr.reduce((sum, number) => sum + number, 0);
 
 console.log(sumOfArray(arr));
 
@@ -822,9 +822,9 @@ Output : [5, 4, 3, 2, 1]
 
 ```ts
 
-let numbers = [10, 5, 8, 22, 18];
+let arr = [10, 5, 8, 22, 18];
 
-let maxNumber = Math.max(...numbers);
+let maxNumber = Math.max(...arr);
 console.log(maxNumber);
 
 Output: 22
@@ -833,7 +833,7 @@ Output: 22
 
 ```ts
 
-let maxNumber = numbers.reduce((max, current) => (current > max ? current : max), numbers[0]);
+let maxNumber = arr.reduce((max, current) => (current > max ? current : max), numbers[0]);
 
 ```
 
@@ -841,7 +841,7 @@ let maxNumber = numbers.reduce((max, current) => (current > max ? current : max)
 
 let maxNumber = numbers[0];
 
-numbers.forEach(number => {
+arr.forEach(number => {
   if (number > maxNumber) {
     maxNumber = number;
   }
@@ -855,9 +855,9 @@ console.log(maxNumber);
 
 ```ts
 
-let numbers = [10, 5, 8, 22, 18];
+let arr = [10, 5, 8, 22, 18];
 
-const sortedNumber = numbers.sort((a,b)=> b-a)
+const sortedNumber = arr.sort((a, b)=> b-a)
 
 console.log(sortedNumber[1]);
 
@@ -869,9 +869,9 @@ Output: 18
 
 ```ts
 
-let numbers = [1, 2, 3, 4, 4, 5, 6, 6, 7];
+let arr = [1, 2, 3, 4, 4, 5, 6, 6, 7];
 
-let uniqueNumbers = [...new Set(numbers)];
+let uniqueNumbers = [...new Set(arr)];
 
 console.log(uniqueNumbers);
 
@@ -879,9 +879,9 @@ console.log(uniqueNumbers);
 
 ```ts
 
-let numbers = [1, 2, 3, 4, 4, 5, 6, 6, 7];
+let arr = [1, 2, 3, 4, 4, 5, 6, 6, 7];
 
-let uniqueNumbers = numbers.filter((value, index, self) => self.indexOf(value) === index);
+let uniqueNumbers = arr.filter((value, index, self) => self.indexOf(value) === index);
 
 console.log(uniqueNumbers);
 
@@ -891,13 +891,13 @@ Output: [1, 2, 3, 4, 5, 6, 7]
 
 ```ts
 
-let numbers = [1, 2, 3, 4, 4, 5, 6, 6, 7];
+let arr = [1, 2, 3, 4, 4, 5, 6, 6, 7];
 
-let uniqueNumbers = numbers.reduce((acc, value) => {
-  if (!acc.includes(value)) {
-    acc.push(value);
+let uniqueNumbers = arr.reduce((unique, number) => {
+  if (!unique.includes(number)) {
+    unique.push(number);
   }
-  return acc;
+  return unique;
 }, []);
 
 console.log(uniqueNumbers);
@@ -913,12 +913,14 @@ Output: [1, 2, 3, 4, 5, 6, 7]
 const array = [1, 2, 3, 3];
 
 const output = array.reduce((occurrences, number)=>{
-  if(occurrences[number]){
+
+ if(occurrences[number]){
     occurrences[number] = occurrences[number] + 1;
   }else{
     occurrences[number] = 1
   }
   return occurrences;
+
 }, {})
 
 Output: { 1: 1, 2: 1, 3: 2 }
@@ -930,12 +932,12 @@ Output: { 1: 1, 2: 1, 3: 2 }
 
 ```ts
 
-let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 let oddNumbers = [];
 let evenNumbers = [];
 
-numbers.forEach(number => {
+arr.forEach(number => {
   if (number % 2 === 0) {
     evenNumbers.push(number);
   } else {
@@ -953,18 +955,18 @@ Output: Even Numbers: [2, 4, 6, 8, 10]
 
 ```ts
 
-let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-let oddNumbers = numbers.filter(number => number % 2 !== 0);
-let evenNumbers = numbers.filter(number => number % 2 === 0);
+let oddNumbers = arr.filter(number => number % 2 !== 0);
+let evenNumbers = arr.filter(number => number % 2 === 0);
 
 ```
 
 ```ts
 
-let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-let { oddNumbers, evenNumbers } = numbers.reduce((acc, number) => {
+let { oddNumbers, evenNumbers } = arr.reduce((acc, number) => {
   if (number % 2 === 0) {
     acc.evenNumbers.push(number);
   } else {
