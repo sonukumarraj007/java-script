@@ -731,6 +731,8 @@ Output : 2
 
 ```
 
+# Array Programs
+
 ## Sum of digit
 
 ```ts
@@ -910,10 +912,14 @@ Output: [1, 2, 3, 4, 5, 6, 7]
 
 const array = [1, 2, 3, 3];
 
-const occurrences = array.reduce((acc, number) => {
-  acc[number] = (acc[number] || 0) + 1;
-  return acc;
-}, {});
+const output = array.reduce((occurrences, number)=>{
+  if(occurrences[number]){
+    occurrences[number] = occurrences[number] + 1;
+  }else{
+    occurrences[number] = 1
+  }
+  return occurrences;
+}, {})
 
 Output: { 1: 1, 2: 1, 3: 2 }
 
