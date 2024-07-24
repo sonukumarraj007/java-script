@@ -2,7 +2,6 @@
 
 ## [Interview Ask Program](/interview_ask_program.md)
 
-[### Basic operation using callback](#basic-operation-using-callback)
 
 ## Beginner
 
@@ -54,7 +53,7 @@
 
 ## Basic Programs:
 
-
+* [Basic operation using callback](#basic-operation-using-callback)
 * [Area of a circle](#area-of-a-circle)
 * [Area of a square](#area-of-a-square)
 * [Area of a triangle](#area-of-a-triangle)
@@ -83,10 +82,10 @@
 * [Remove duplicate element in an array](#remove-duplicate-element-in-an-array)
 * [To count the occurrences of each digit in the given array](#to-count-the-occurrences-of-each-digit-in-the-given-array)
 * [Print odd and even number from an array](#print-odd-and-even-number-from-an-array)
+* [How to find the missing number in integer array of 1 to 100](#how-to-find-the-missing-number-in-integer-array-of-1-to-100)
 * [Add two matrices](#add-two-matrices)
 * [Multiply two matrices](#multiply-two-matrices)
 * [Transpose matrix](#transpose-matrix)
-* [How to find the missing number in integer array of 1 to 100](#how-to-find-the-missing-number-in-integer-array-of-1-to-100)
 
 ## String Programs:
 
@@ -117,6 +116,23 @@
 <ol>
 			<li>*<br>**<br>***<br>****</li>
 </ol>
+
+```ts
+
+function printTriangle(rows) {
+    for (let i = 1; i <= rows; i++) {
+        let row = '';
+        for (let j = 1; j <= i; j++) {
+            row += "*";
+        }
+  
+        console.log(row);
+    }
+}
+
+printTriangle(4);
+
+```
 
 
 ## loop
@@ -953,6 +969,37 @@ let { oddNumbers, evenNumbers } = numbers.reduce((acc, number) => {
 
 ```
 
+## How to find the missing number in integer array of 1 to 100
+
+The expected sum of numbers from 1 to 100 can be calculated using the formula for the sum of an arithmetic series: 
+
+n×(n+1) / 2 , where n is the last number in the series (in this case, 100).
+
+```ts
+
+function findMissingNumber(arr) {
+  // Calculate the sum of numbers from 1 to 100
+  let expectedSum = (100 * 101) / 2; // Sum of an arithmetic series formula: n*(n+1)/2
+
+  // Calculate the sum of numbers in the array
+  let actualSum = arr.reduce((sum, num) => sum + num, 0);
+
+  // Find the missing number
+  let missingNumber = expectedSum - actualSum;
+
+  return missingNumber;
+}
+
+// Example usage
+
+let numbersArray = [1, 2, 3, /*...*/, 99, 100]; // Array containing numbers from 1 to 100 with one missing number
+
+let missingNumber = findMissingNumber(numbersArray);
+
+console.log("Missing number:", missingNumber);
+
+```
+
 ## Add two matrices
 
 ```ts
@@ -1084,37 +1131,7 @@ console.log(transposed);
 
 ```
 
-## How to find the missing number in integer array of 1 to 100
-
-The expected sum of numbers from 1 to 100 can be calculated using the formula for the sum of an arithmetic series: 
-
-n×(n+1) / 2 , where n is the last number in the series (in this case, 100).
-
-```ts
-
-function findMissingNumber(arr) {
-  // Calculate the sum of numbers from 1 to 100
-  let expectedSum = (100 * 101) / 2; // Sum of an arithmetic series formula: n*(n+1)/2
-
-  // Calculate the sum of numbers in the array
-  let actualSum = arr.reduce((sum, num) => sum + num, 0);
-
-  // Find the missing number
-  let missingNumber = expectedSum - actualSum;
-
-  return missingNumber;
-}
-
-// Example usage
-
-let numbersArray = [1, 2, 3, /*...*/, 99, 100]; // Array containing numbers from 1 to 100 with one missing number
-
-let missingNumber = findMissingNumber(numbersArray);
-
-console.log("Missing number:", missingNumber);
-
-```
-
+# String Program
 
 ## Reverse the words like
 
@@ -1628,23 +1645,5 @@ let target = 8;
 console.log("Array:", array);
 console.log("Target:", target);
 console.log("Index of target:", binarySearch(array, target)); // Output: 4
-
-```
-
-
-```ts
-
-function printTriangle(rows) {
-    for (let i = 1; i <= rows; i++) {
-        let row = '';
-        for (let j = 1; j <= i; j++) {
-            row += "*";
-        }
-  
-        console.log(row);
-    }
-}
-
-printTriangle(4);
 
 ```
