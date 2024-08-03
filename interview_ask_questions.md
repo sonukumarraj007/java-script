@@ -1520,3 +1520,173 @@ console.log(rabbit.eats); // true
 console.log(rabbit.walks); // true
 
 ```
+
+## Design Patterns 
+
+In JavaScript, design patterns are typical solutions to common problems in software design.
+
+These patterns help in organizing code, managing state, and making your JavaScript applications more modular and maintainable.
+
+--Singleton Pattern: Ensures a class has only one instance and provides a global point of access to it.
+--Factory Pattern: Creates objects without specifying the exact class of object that will be created.
+--Observer Pattern: Allows an object (subject) to notify other objects (observers) about changes.
+--Decorator Pattern: Adds new functionality to an object dynamically.
+--Module Pattern: Encapsulates private and public methods and properties.
+
+### Singleton Pattern:
+
+Ensures a class has only one instance and provides a global point of access to it.
+
+```ts
+
+class Singleton {
+  constructor() {
+    if (!Singleton.instance) {
+      Singleton.instance = this;
+    }
+    return Singleton.instance;
+  }
+}
+
+const instance1 = new Singleton();
+const instance2 = new Singleton();
+
+console.log(instance1 === instance2); // true
+
+```
+
+### Factory Pattern:
+
+Creates objects without specifying the exact class of object that will be created.
+
+```ts
+
+class Dog {
+  speak() {
+    console.log('Woof!');
+  }
+}
+
+class Cat {
+  speak() {
+    console.log('Meow!');
+  }
+}
+
+class AnimalFactory {
+  static createAnimal(type) {
+    if (type === 'dog') {
+      return new Dog();
+    } else if (type === 'cat') {
+      return new Cat();
+    }
+    throw new Error('Unknown animal type');
+  }
+}
+
+const dog = AnimalFactory.createAnimal('dog');
+dog.speak(); // Woof!
+
+
+```
+
+### Observer Pattern:
+
+Allows an object (subject) to notify other objects (observers) about changes.
+
+```ts
+
+class Subject {
+  constructor() {
+    this.observers = [];
+  }
+
+  addObserver(observer) {
+    this.observers.push(observer);
+  }
+
+  notifyObservers(message) {
+    this.observers.forEach(observer => observer.update(message));
+  }
+}
+
+class Observer {
+  update(message) {
+    console.log(`Observer received message: ${message}`);
+  }
+}
+
+const subject = new Subject();
+const observer1 = new Observer();
+const observer2 = new Observer();
+
+subject.addObserver(observer1);
+subject.addObserver(observer2);
+
+subject.notifyObservers('Hello Observers!'); // Both observers receive the message
+
+```
+
+### Decorator Pattern: 
+
+Adds new functionality to an object dynamically.
+
+```ts
+
+class Coffee {
+  cost() {
+    return 5;
+  }
+}
+
+class MilkDecorator {
+  constructor(coffee) {
+    this.coffee = coffee;
+  }
+
+  cost() {
+    return this.coffee.cost() + 2;
+  }
+}
+
+class SugarDecorator {
+  constructor(coffee) {
+    this.coffee = coffee;
+  }
+
+  cost() {
+    return this.coffee.cost() + 1;
+  }
+}
+
+const coffee = new Coffee();
+const milkCoffee = new MilkDecorator(coffee);
+const milkAndSugarCoffee = new SugarDecorator(milkCoffee);
+
+console.log(milkAndSugarCoffee.cost()); // 8
+
+```
+
+### Module Pattern: 
+
+Encapsulates private and public methods and properties.
+
+```ts
+
+const MyModule = (function() {
+  let privateVariable = 'I am private';
+
+  function privateMethod() {
+    console.log(privateVariable);
+  }
+
+  return {
+    publicMethod: function() {
+      privateMethod();
+    }
+  };
+})();
+
+MyModule.publicMethod(); // I am private
+
+```
