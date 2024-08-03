@@ -1525,15 +1525,16 @@ console.log(rabbit.walks); // true
 
 In JavaScript, design patterns are typical solutions to common problems in software design.
 
+- **Singleton Pattern:** Ensures a class has only one instance and provides a global point of access to it.
+- **Factory Pattern:** Creates objects without specifying the exact class of object that will be created.
+- **Observer Pattern:** Allows an object (subject) to notify other objects (observers) about changes.
+- **Decorator Pattern:** Adds new functionality to an object dynamically.
+- **Module Pattern:** Encapsulates private and public methods and properties.
+
 These patterns help in organizing code, managing state, and making your JavaScript applications more modular and maintainable.
 
---Singleton Pattern: Ensures a class has only one instance and provides a global point of access to it.
---Factory Pattern: Creates objects without specifying the exact class of object that will be created.
---Observer Pattern: Allows an object (subject) to notify other objects (observers) about changes.
---Decorator Pattern: Adds new functionality to an object dynamically.
---Module Pattern: Encapsulates private and public methods and properties.
 
-### Singleton Pattern:
+### 1. Singleton Pattern:
 
 Ensures a class has only one instance and provides a global point of access to it.
 
@@ -1555,7 +1556,7 @@ console.log(instance1 === instance2); // true
 
 ```
 
-### Factory Pattern:
+### 2. Factory Pattern:
 
 Creates objects without specifying the exact class of object that will be created.
 
@@ -1590,7 +1591,7 @@ dog.speak(); // Woof!
 
 ```
 
-### Observer Pattern:
+### 3. Observer Pattern:
 
 Allows an object (subject) to notify other objects (observers) about changes.
 
@@ -1627,7 +1628,7 @@ subject.notifyObservers('Hello Observers!'); // Both observers receive the messa
 
 ```
 
-### Decorator Pattern: 
+### 4. Decorator Pattern: 
 
 Adds new functionality to an object dynamically.
 
@@ -1667,7 +1668,7 @@ console.log(milkAndSugarCoffee.cost()); // 8
 
 ```
 
-### Module Pattern: 
+### 5. Module Pattern: 
 
 Encapsulates private and public methods and properties.
 
