@@ -83,6 +83,7 @@
 * [To count the occurrences of each digit in the given array](#to-count-the-occurrences-of-each-digit-in-the-given-array)
 * [Print odd and even number from an array](#print-odd-and-even-number-from-an-array)
 * [How to find the missing number in integer array of 1 to 100](#how-to-find-the-missing-number-in-integer-array-of-1-to-100)
+* [Absolute difference between the sums of its diagonals matrices](#absolute-difference-between-the-sums-of-its-diagonals-matrices)
 * [Add two matrices](#add-two-matrices)
 * [Multiply two matrices](#multiply-two-matrices)
 * [Transpose matrix](#transpose-matrix)
@@ -1005,6 +1006,35 @@ let numbersArray = [1, 2, 3, /*...*/, 99, 100]; // Array containing numbers from
 let missingNumber = findMissingNumber(numbersArray);
 
 console.log("Missing number:", missingNumber);
+
+```
+
+## Absolute difference between the sums of its diagonals matrices
+
+```ts
+
+function diagonalDifference(matrix) {
+    let primaryDiagonalSum = 0;
+    let secondaryDiagonalSum = 0;
+    let length = matrix.length;
+    
+    for (let i = 0; i < matrix.length; i++) {
+        primaryDiagonalSum += matrix[i][i];  // Sum of primary diagonal (top-left to bottom-right)
+        secondaryDiagonalSum += matrix[i][length - 1 - i];  // Sum of secondary diagonal (top-right to bottom-left)
+    }
+
+    return Math.abs(primaryDiagonalSum - secondaryDiagonalSum);  // Absolute difference  let sumOfLeftDiagonals  = 0;
+  
+}
+
+const matrix = [
+    [10, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+];
+
+console.log(diagonalDifference(matrix));  // Output: 9
+
 
 ```
 
